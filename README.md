@@ -1,5 +1,5 @@
 # Mykola Kulinich
-##My training projects:  
+## My training projects:  
 
 My first project is "*Mini-book project*" - [Mini-book](kolkul.github.io/MyBookProject/ "MyBookProject. Without adaptation and Bootstrap")  
 
