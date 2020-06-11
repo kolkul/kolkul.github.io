@@ -1,0 +1,123 @@
+body {
+	margin: 0;
+	font-size: 14px;
+	font-family: sans-serif;
+}
+
+h2 {
+	font-weight: 100;
+}
+
+.container {
+	max-width: 900px;
+	margin: auto;
+	padding: 15px;
+}
+.image {
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+	height: 200px;
+}
+.image-one {
+	background: url(../img/1.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.image-two {
+	background: url(../img/2.jpg) center no-repeat;
+	background-size: cover;
+}
+.image-three {
+	background: url(../img/3.jpg) center no-repeat;
+	background-size: cover;
+}
+.image-four {
+	background: url(../img/4.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.image::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.4;
+	transition: 0.4s;
+	transform-origin: 0;
+	transform: scaleX(1);
+}
+
+.image:hover::after {
+	opacity: 0;
+	transform: scaleX(0);
+}
+
+.button-one {
+	border: none;
+	font-weight: 700;
+	font-size: 14px;
+ color: white;
+ padding: .8em 1em calc(.8em + 3px);
+ border-radius: 3px;
+ background: rgb(64,199,129);
+ box-shadow: 0 -3px rgb(53,167,110) inset;
+ transition: 0.2s;
+}
+.button-two {
+ display: inline-block;
+ position: relative;
+ color: white;
+ padding: .5em 2em;
+ border: none;
+ border-width: 2px 0;
+ border-style: solid none;
+ border-color: #FDBE33 #000 #D77206;
+ border-radius: 6px;
+ background: linear-gradient(#F3AE0F, #E38916) #E38916;
+ transition: 0.2s;
+}
+.button {
+	position: relative;
+}
+
+.button-one::before {
+	content: '';
+	position: absolute;
+	display: block;
+	border-radius: 3px;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0;
+	transition: 0.4s;
+	right: 0px;
+	top: -1px;
+}
+
+.button-one:hover::before {
+	opacity: 0.4;
+}
+
+.button-two::before {
+	content: '';
+ display: block;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ border: none;
+ border-width: 2px 0;
+ border-style: solid none;
+ border-color: black;
+ border-radius: 6px;
+ background: black;
+ right: 0;
+ top: -2px;
+ transition: 0.2s;
+ opacity: 0;
+}
+
+.button-two:hover::before {
+	opacity: 0.4;
+}
