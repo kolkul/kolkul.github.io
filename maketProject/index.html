@@ -2,16 +2,33 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+
+  <title>Гипсолит</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/adaptive.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
   <div class="page">
 
+    <!-- HEADER -->
     <div class="header">
       <div class="header-logo">
+
+        <div class="header__right">
+          <div class="phone">
+            <p>+7 495 771 05 08</p>
+          </div>
+          <div class="button">
+            <p>консультация</p>
+            <div class="button-hover">
+              <p>консультация</p>
+            </div>
+          </div>
+        </div>
+
         <div class="container">
           <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
           <div class="header__right">
@@ -28,10 +45,9 @@
         </div>
       </div>
 
-
-
       <div class="header-form">
         <div class="container">
+
           <div class="container-name">
             <div class="name">
               <div class="name__main">Автоматизированная штукатурка стен</div>
@@ -42,8 +58,6 @@
             </div>
             <div class="btn-description">Оплата по факту!</div>
           </div>
-
-
 
           <div class="container-form">
             <div class="container-form__box">
@@ -80,6 +94,7 @@
     <!-- advantages -->
     <div class="advantages">
       <div class="container">
+
         <div class="advantages__header">
           <strong>Преимущества работы с нами</strong>
         </div>
@@ -128,9 +143,9 @@
     </div>
 
     <!-- PRICE -->
-
     <div class="price-container">
       <div class="container">
+
         <div class="price-container__name">
           <strong>Цены</strong>
           <p>Выберите вариант, который подходит Вам:</p>
@@ -152,6 +167,7 @@
               <li>Проведения работ</li>
               <li>Уборка</li>
             </ul>
+            <a href="#" class="m-list">Что входит в стоимость?</a>
             <div class="box-button">
               <div class="button">
                 <p>Заказать</p>
@@ -165,6 +181,7 @@
             <div class="price-box__name">Штукатурка под шпаклёвку</div>
             <div class="price-box__img"><img src="img/price-img2.png" alt="#"></div>
             <div class="price"><p>от <strong>530</strong> руб/м<sup>2</sup></p></div>
+            <a href="#" class="m-list">Что входит в стоимость?</a>
             <ul class="list">
               <li>Завоз материала и его подъём</li>
               <li>Проведение работ</li>
@@ -184,6 +201,7 @@
             <div class="price-box__name">Штукатурка под обои</div>
             <div class="price-box__img"><img src="img/price-img3.png" alt="#"></div>
             <div class="price"><p>от <strong>560</strong> руб/м<sup>2</sup></p></div>
+            <a href="#" class="m-list">Что входит в стоимость?</a>
             <ul class="list">
               <li>Завоз материала и его подъём</li>
               <li>Проведение работ</li>
@@ -202,13 +220,19 @@
           </div>
         </div>
 
+        <div class="price-container-btn">
+          <div class="button" id="price-btn">
+            <p>Рассчитать точную стоимость</p>
+            <div class="button-hover">
+              <p>Рассчитать точную стоимость</p>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
 
-
-
-    <!-- REVIEW_CONTAINER -->
+    <!-- REVIEW_ -->
     <div class="review-container">
       <div class="container">
         <div class="review-container__name">Отзывы</div>
@@ -234,17 +258,16 @@
               </div>
             </div>
           </div>
+          <div class="form-description">
+            Перезвоним в ближайшее время
+          </div>
         </div>
       </div>
     </div>
 
-
     <!-- PLAN -->
-
     <div class="plan-container">
       <div class="container">
-
-        <img src="img/plan-head.png" alt="#" class="plan-container__bcg-image">
 
         <div class="plan-container__top">
           <div class="plan-container__name">Схема работы</div>
@@ -283,9 +306,7 @@
       </div>
     </div>
 
-
     <!-- ALLINCLUSIVE -->
-
     <div class="allinc-container">
       <div class="container">
 
@@ -380,15 +401,12 @@
       </div>
     </div>
 
-
-<!-- DISPEL -->
-
-
+    <!-- DISPEL -->
     <div class="dispel-container">
       <div class="container">
         <img src="img/girl.png" alt="#" class="img-girl">
 
-        <div class="dispel-container__name">Мы развеем все опасения</div>
+        <div class="dispel-container__name">Мы развеем все опасения <span>Какие могут быть проблемы</span></div>
 
         <div class="dispel-block">
 
@@ -416,19 +434,23 @@
             <div class="box-P__name">Наше решение:</div>
             <div class="box-P__description-box">
               <div class="box-P__tick"></div>
-              <div class="box-P__description">Высокая квалификация специалистов + минимум 5 летний опыт работы = идеально ровные поверхности</div>
+              <div class="box-M__description">Стены и углы будут неровными</div>
+              <div class="box-P__description"><span>Решение:</span>Высокая квалификация специалистов + минимум 5 летний опыт работы = идеально ровные поверхности</div>
             </div>
             <div class="box-P__description-box">
               <div class="box-P__tick"></div>
-              <div class="box-P__description">Соблюдаем сроки, которые прописаны в договоре. На квартиру площадью 135 м2 уходит от 3 до 5 дней</div>
+              <div class="box-M__description">Ремонт затянется на долгие месяцы</div>
+              <div class="box-P__description"><span>Решение:</span>Соблюдаем сроки, которые прописаны в договоре. На квартиру площадью 135 м2 уходит от 3 до 5 дней</div>
             </div>
             <div class="box-P__description-box">
               <div class="box-P__tick"></div>
-              <div class="box-P__description">Доставка материала и подъём бесплатно</div>
+              <div class="box-M__description">Сложности с доставкой и разгрузкой материалов</div>
+              <div class="box-P__description"><span>Решение:</span>Доставка материала и подъём бесплатно</div>
             </div>
             <div class="box-P__description-box">
               <div class="box-P__tick"></div>
-              <div class="box-P__description">Убираем и вывозим мусор после работ</div>
+              <div class="box-M__description">Останется мусор и пыль после работ</div>
+              <div class="box-P__description"><span>Решение:</span>Убираем и вывозим мусор после работ</div>
             </div>
           </div>
 
@@ -437,9 +459,7 @@
       </div>
     </div>
 
-<!-- MATERIALS -->
-
-
+    <!-- MATERIALS -->
     <div class="mat-container">
       <div class="container">
 
@@ -480,9 +500,7 @@
       </div>
     </div>
 
-
-
-<!-- СHECK -->
+    <!-- СHECK -->
     <div class="check-container">
       <div class="container">
 
@@ -522,7 +540,7 @@
       </div>
     </div>
 
-<!-- ADDITIONAL SERVICES -->
+    <!-- ADDITIONAL SERVICES -->
     <div class="addSer-container">
       <div class="container">
 
@@ -573,10 +591,11 @@
       </div>
     </div>
 
-<!-- CONTACTS -->
-
+    <!-- CONTACTS -->
     <div class="contacts-container">
       <div class="container">
+
+        <div class="map contacts__map"><img src="img/contacts-map.png" alt="#"></div>
 
         <div class="contacts-block">
 
@@ -607,7 +626,7 @@
                 <div class="input-description"><span>E-mail</span></div>
               </div>
               <div class="form-box__input">
-                <input type="text" class="input">
+                <textarea rows="5" cols="45" name="text" class="input"></textarea>
                 <div class="input-description"><span>Сообщение</span></div>
               </div>
               <div class="button">
@@ -624,9 +643,7 @@
       </div>
     </div>
 
-
-<!-- FOOTER -->
-
+    <!-- FOOTER -->
     <div class="footer-container">
       <div class="container">
 
