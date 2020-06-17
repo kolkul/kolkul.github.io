@@ -25,7 +25,7 @@
           <div class="phone">
             <p>+7 495 771 05 08</p>
           </div>
-          <div class="button">
+          <div class="button modal-open">
             <p>консультация</p>
             <div class="button-hover">
               <p>консультация</p>
@@ -39,7 +39,7 @@
             <div class="phone">
               <p>+7 495 771 05 08</p>
             </div>
-            <div class="button">
+            <div class="button modal-open">
               <p>Получить консультацию</p>
               <div class="button-hover">
                 <p>Получить консультацию</p>
@@ -239,7 +239,45 @@
     <!-- REVIEW_ -->
     <div class="review-container">
       <div class="container">
+
         <div class="review-container__name">Отзывы</div>
+
+        <div class="review-container-block">
+          <div class="arrow-block">
+            <button type="button" name="button"></button>
+          </div>
+
+          <div class="review-slider">
+            <div class="review-box">
+              <div class="review-box__slider">
+                <div class="review-box__img video"></div>
+                <div class="review-box__img"></div>
+                <div class="review-box__img"></div>
+                <div class="review-box__img"></div>
+                <div class="review-box__img"></div>
+                <div class="review-box__img"></div>
+              </div>
+              <div class="review-box__description-block">
+                <div class="review-box__descriprion-box">
+                  <p class="review-box__descriprion">Объект: г.Москва, Нахимовский проспект д.10</p>
+                  <p class="review-box__descriprion">Площадь: <strong>357м<sup>2</sup></strong></p>
+                  <p class="review-box__descriprion">Выполнен за: <strong>10 дней</strong></p>
+                  <p class="review-box__descriprion">Стоимость: <strong>550 рублей за квадратный метр</strong></p>
+                  <p class="review-box__descriprion">Особенности: <strong>перепады неровности стен достигали до 6 см</strong></p>
+                </div>
+                <div class="review-box__descriprion-user">
+                  <div class="user"><p>Заказчик<br><span>Нахимов Артём</span></p></div>
+                  <p class="description-user">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="arrow-block">
+            <button type="button" name="button"></button>
+          </div>
+        </div>
+
         <div class="review-container__block"></div>
         <div class="contact-container">
           <img src="img/head.png" alt="#">
@@ -266,6 +304,7 @@
             Перезвоним в ближайшее время
           </div>
         </div>
+
       </div>
     </div>
 
@@ -670,6 +709,38 @@
 
         </div>
 
+      </div>
+    </div>
+
+    <!-- MODAL BOX -->
+
+    <div class="modal">
+      <div class="modal-box">
+        <div class="modal-form form-box">
+          <button class="modal-close" type="button" name="button">&times;</button>
+          <div class="form-box__header">
+            Для расчёта точной стоимости закажите <strong>выезд замерщика</strong>
+          </div>
+          <div class="form-box__input">
+            <input type="text" class="input">
+            <div class="input-description"><span>Ваше имя</span></div>
+          </div>
+          <div class="form-box__input">
+            <input type="text" class="input">
+            <div class="input-description"><span>Номер телефона</span></div>
+          </div>
+          <div class="form-box__input">
+            <textarea cols="35" name="text" class="input"></textarea>
+            <div class="input-description"><span>Сообщение</span></div>
+          </div>
+          <div class="button">
+            <p>Оставить заявку</p>
+            <div class="button-hover">
+              <p>Оставить заявку</p>
+            </div>
+          </div>
+          <div class="form-box__description"><span>Приедем в день обращения*</span></div>
+        </div>
       </div>
     </div>
 

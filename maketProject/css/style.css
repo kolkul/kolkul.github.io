@@ -983,12 +983,12 @@ img {
   .box-P__description span {
     display: none; }
 
-/* line 632, ../sass/style.sass */
+/* line 631, ../sass/style.sass */
 .mat-container {
   padding: 50px 0;
   background-image: url(../img/review-bcg.jpg); }
 
-/* line 635, ../sass/style.sass */
+/* line 634, ../sass/style.sass */
 .mat-container__name-block {
   margin: 50px 0;
   display: -webkit-box;
@@ -1004,17 +1004,17 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-  /* line 641, ../sass/style.sass */
+  /* line 640, ../sass/style.sass */
   .mat-container__name-block .mat-container__name {
     font-family: "ProximaNova-Bold", sans-serif;
     font-size: 36px;
     margin-bottom: 25px; }
-  /* line 645, ../sass/style.sass */
+  /* line 644, ../sass/style.sass */
   .mat-container__name-block .mat-container__name-description {
     font-family: "ProximaNova-Regular", sans-serif;
     font-size: 19px; }
 
-/* line 648, ../sass/style.sass */
+/* line 647, ../sass/style.sass */
 .mat-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1025,7 +1025,7 @@ img {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch; }
-  /* line 652, ../sass/style.sass */
+  /* line 651, ../sass/style.sass */
   .mat-block .mat-box {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1036,7 +1036,7 @@ img {
             flex-direction: column;
     width: 25%; }
 
-/* line 656, ../sass/style.sass */
+/* line 655, ../sass/style.sass */
 .mat-box__img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1049,24 +1049,24 @@ img {
       -ms-flex-align: center;
           align-items: center; }
 
-/* line 661, ../sass/style.sass */
+/* line 660, ../sass/style.sass */
 .mat-box__name {
   text-align: center;
   font-family: "ProximaNova-Bold", sans-serif;
   font-size: 22px; }
 
-/* line 665, ../sass/style.sass */
+/* line 664, ../sass/style.sass */
 .mat-box__name-description {
   margin: 15px 0;
   text-align: center;
   font-family: "ProximaNova-Regular", sans-serif;
   font-size: 19px;
   line-height: 1.4; }
-  /* line 671, ../sass/style.sass */
+  /* line 670, ../sass/style.sass */
   .mat-box__name-description span {
     font-family: "ProximaNova-Semibold", sans-serif; }
 
-/* line 673, ../sass/style.sass */
+/* line 672, ../sass/style.sass */
 .mat-box__link {
   height: 100%;
   display: -webkit-box;
@@ -1075,7 +1075,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
-  /* line 677, ../sass/style.sass */
+  /* line 676, ../sass/style.sass */
   .mat-box__link a {
     -ms-flex-item-align: end;
         align-self: flex-end;
@@ -1086,28 +1086,28 @@ img {
     -webkit-text-decoration-color: #7ec891;
             text-decoration-color: #7ec891; }
 
-/* line 684, ../sass/style.sass */
+/* line 683, ../sass/style.sass */
 .mat-container__description {
   margin: 50px 0;
   text-align: center;
   font-family: "ProximaNova-Regular", sans-serif;
   font-size: 20px; }
-  /* line 689, ../sass/style.sass */
+  /* line 688, ../sass/style.sass */
   .mat-container__description span {
     font-family: "ProximaNova-Bold", sans-serif; }
-  /* line 691, ../sass/style.sass */
+  /* line 690, ../sass/style.sass */
   .mat-container__description a {
     color: #009225;
     text-decoration: underline;
     -webkit-text-decoration-color: #7ec891;
             text-decoration-color: #7ec891; }
 
-/* line 698, ../sass/style.sass */
+/* line 697, ../sass/style.sass */
 .check-container {
   background-image: url(../img/check-bcg.jpg);
   padding: 110px 0; }
 
-/* line 701, ../sass/style.sass */
+/* line 700, ../sass/style.sass */
 .check-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1118,12 +1118,12 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  /* line 705, ../sass/style.sass */
+  /* line 704, ../sass/style.sass */
   .check-block .check-box,
   .check-block .check-box__form {
     width: 49%; }
 
-/* line 708, ../sass/style.sass */
+/* line 707, ../sass/style.sass */
 .check-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1139,7 +1139,7 @@ img {
       -ms-flex-pack: start;
           justify-content: flex-start; }
 
-/* line 713, ../sass/style.sass */
+/* line 712, ../sass/style.sass */
 .check-box__name {
   padding-right: 270px;
   font-family: "ProximaNova-Bold", sans-serif;
@@ -1147,7 +1147,7 @@ img {
   text-transform: uppercase;
   line-height: 1.5; }
 
-/* line 719, ../sass/style.sass */
+/* line 718, ../sass/style.sass */
 .check-box__name-description,
 .check-box__name-description2 {
   margin: 20px 0;
@@ -1155,7 +1155,7 @@ img {
   font-family: "ProximaNova-Regular", sans-serif;
   font-size: 24px; }
 
-/* line 725, ../sass/style.sass */
+/* line 724, ../sass/style.sass */
 .check-box__form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1166,21 +1166,21 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  /* line 729, ../sass/style.sass */
+  /* line 728, ../sass/style.sass */
   .check-box__form .form-box {
     width: 360px; }
-    /* line 732, ../sass/style.sass */
+    /* line 731, ../sass/style.sass */
     .check-box__form .form-box .button p {
       font-family: "ProximaNova-Semibold", sans-serif;
       font-size: 14px; }
 
-/* line 738, ../sass/style.sass */
+/* line 737, ../sass/style.sass */
 .addSer-container {
   background-image: url(../img/price-bcg.jpg);
   background-repeat: repeat;
   padding: 100px 0; }
 
-/* line 742, ../sass/style.sass */
+/* line 741, ../sass/style.sass */
 .addSer-container__name-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1197,24 +1197,24 @@ img {
           flex-direction: column;
   margin-bottom: 50px; }
 
-/* line 748, ../sass/style.sass */
+/* line 747, ../sass/style.sass */
 .addSer-container__name,
 .addSer-container__name-description {
   color: white;
   text-align: center; }
 
-/* line 752, ../sass/style.sass */
+/* line 751, ../sass/style.sass */
 .addSer-container__name {
   font-family: "ProximaNova-Bold", sans-serif;
   font-size: 36px; }
 
-/* line 755, ../sass/style.sass */
+/* line 754, ../sass/style.sass */
 .addSer-container__name-description {
   font-family: "ProximaNova-Regular", sans-serif;
   font-size: 19px;
   margin-top: 25px; }
 
-/* line 759, ../sass/style.sass */
+/* line 758, ../sass/style.sass */
 .addSer-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1225,7 +1225,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  /* line 763, ../sass/style.sass */
+  /* line 762, ../sass/style.sass */
   .addSer-block .addSer-box {
     width: 33%;
     display: -webkit-box;
@@ -1242,7 +1242,7 @@ img {
         -ms-flex-direction: column;
             flex-direction: column; }
 
-/* line 769, ../sass/style.sass */
+/* line 768, ../sass/style.sass */
 .addSer-box__img-box {
   width: 330px;
   height: 175px;
@@ -1258,12 +1258,12 @@ img {
           align-items: center;
   position: relative; }
 
-/* line 779, ../sass/style.sass */
+/* line 778, ../sass/style.sass */
 .addSer-box:first-child .addSer-box__img-box img {
   position: absolute;
   top: -30px; }
 
-/* line 782, ../sass/style.sass */
+/* line 781, ../sass/style.sass */
 .addSer-box__name {
   text-align: center;
   font-family: "ProximaNova-Bold", sans-serif;
@@ -1271,29 +1271,29 @@ img {
   color: white;
   margin: 25px 0; }
 
-/* line 789, ../sass/style.sass */
+/* line 788, ../sass/style.sass */
 .addSer-box__btn .button {
   width: 150px; }
-  /* line 791, ../sass/style.sass */
+  /* line 790, ../sass/style.sass */
   .addSer-box__btn .button p {
     font-family: "ProximaNova-Bold", sans-serif;
     font-size: 16px; }
 
-/* line 797, ../sass/style.sass */
+/* line 796, ../sass/style.sass */
 .contacts-container {
   background-image: url(../img/contacts-bcg.jpg);
   padding: 50px 0; }
 
-/* line 800, ../sass/style.sass */
+/* line 799, ../sass/style.sass */
 .map {
   display: none; }
 
-/* line 802, ../sass/style.sass */
+/* line 801, ../sass/style.sass */
 .contacts-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  /* line 804, ../sass/style.sass */
+  /* line 803, ../sass/style.sass */
   .contacts-block .contacts-box,
   .contacts-block .contacts-box__form {
     width: 50%;
@@ -1301,7 +1301,7 @@ img {
     display: -ms-flexbox;
     display: flex; }
 
-/* line 808, ../sass/style.sass */
+/* line 807, ../sass/style.sass */
 .contacts-box {
   font-family: "ProximaNova-Regular", sans-serif;
   font-size: 18px;
@@ -1310,39 +1310,39 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-  /* line 813, ../sass/style.sass */
+  /* line 812, ../sass/style.sass */
   .contacts-box div {
     margin-bottom: 25px; }
-  /* line 815, ../sass/style.sass */
+  /* line 814, ../sass/style.sass */
   .contacts-box .contacts-box__name {
     font-family: "ProximaNova-Bold", sans-serif;
     font-size: 36px;
     margin-bottom: 45px; }
 
-/* line 819, ../sass/style.sass */
+/* line 818, ../sass/style.sass */
 .contacts-box__map {
   width: 625px;
   height: 190px;
   overflow: hidden;
   position: relative; }
-  /* line 824, ../sass/style.sass */
+  /* line 823, ../sass/style.sass */
   .contacts-box__map img {
     position: absolute;
     top: -245px;
     right: -255px; }
 
-/* line 829, ../sass/style.sass */
+/* line 828, ../sass/style.sass */
 .contacts-box__phone span {
   font-family: "ProximaNova-Bold", sans-serif; }
 
-/* line 832, ../sass/style.sass */
+/* line 831, ../sass/style.sass */
 .contacts-box__email a {
   color: black;
   text-decoration: underline;
   -webkit-text-decoration-color: #9f9f9f;
           text-decoration-color: #9f9f9f; }
 
-/* line 836, ../sass/style.sass */
+/* line 835, ../sass/style.sass */
 .contacts-box__form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1353,20 +1353,20 @@ img {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
-  /* line 840, ../sass/style.sass */
+  /* line 839, ../sass/style.sass */
   .contacts-box__form .form-box {
     padding: 20px 40px;
     width: 350px; }
-  /* line 843, ../sass/style.sass */
+  /* line 842, ../sass/style.sass */
   .contacts-box__form .form-box__input:nth-child(5) {
     height: 120px; }
-    /* line 845, ../sass/style.sass */
+    /* line 844, ../sass/style.sass */
     .contacts-box__form .form-box__input:nth-child(5) .input {
       display: inline;
       text-align: left;
       padding: 15px 15px; }
 
-/* line 852, ../sass/style.sass */
+/* line 851, ../sass/style.sass */
 .footer-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1375,11 +1375,11 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 10px 0 20px 0; }
-  /* line 856, ../sass/style.sass */
+  /* line 855, ../sass/style.sass */
   .footer-block div {
     width: 33.3%; }
 
-/* line 858, ../sass/style.sass */
+/* line 857, ../sass/style.sass */
 .footer-logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1388,7 +1388,7 @@ img {
       -ms-flex-align: center;
           align-items: center; }
 
-/* line 861, ../sass/style.sass */
+/* line 860, ../sass/style.sass */
 .footer-center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1406,13 +1406,13 @@ img {
   justify-content: center;
   font-family: "ProximaNova-Regular", sans-serif;
   font-size: 17px; }
-  /* line 869, ../sass/style.sass */
+  /* line 868, ../sass/style.sass */
   .footer-center .phone {
     width: 100%;
     text-align: center;
     font-family: "ProximaNova-Bold", sans-serif;
     font-size: 20px; }
-  /* line 874, ../sass/style.sass */
+  /* line 873, ../sass/style.sass */
   .footer-center .email,
   .footer-center .open {
     text-align: center;
@@ -1423,7 +1423,7 @@ img {
     color: black;
     margin-top: 3px; }
 
-/* line 882, ../sass/style.sass */
+/* line 881, ../sass/style.sass */
 .footer-right {
   padding-top: 5px;
   display: -webkit-box;
@@ -1436,11 +1436,47 @@ img {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end; }
-  /* line 887, ../sass/style.sass */
+  /* line 886, ../sass/style.sass */
   .footer-right .footer-right__name {
     font-family: "ProximaNova-Light", sans-serif;
     font-size: 11px;
     text-align: right;
     padding-left: 75px; }
+
+/* line 894, ../sass/style.sass */
+.modal {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+/* line 904, ../sass/style.sass */
+.modal-box {
+  position: absolute;
+  top: 10%;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  width: 27%; }
+
+/* line 910, ../sass/style.sass */
+.modal-close {
+  cursor: pointer;
+  position: absolute;
+  top: -5px;
+  right: -17px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: white; }
+
+/* line 920, ../sass/style.sass */
+.modal-form .form-box__input {
+  margin-top: 5px; }
 
 /*# sourceMappingURL=style.css.map */

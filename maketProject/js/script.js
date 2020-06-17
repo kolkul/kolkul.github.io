@@ -1,3 +1,5 @@
+// slider
+
 $(document).ready(function(){
   $('.advantages__general-box').slick({
     infinite: true,
@@ -7,7 +9,6 @@ $(document).ready(function(){
       {
         breakpoint: 1280,
         settings: {
-          arrows: true,
           slidesToShow: 2,
           prevArrow: '<button class="prev arrow"></div>',
           nextArrow: '<button class="next arrow"></div>',
@@ -25,4 +26,22 @@ $(document).ready(function(){
       }
     ]
   });
+});
+
+// modal
+
+$(document).ready(function() {
+	$('.modal-open').click(function(e) {
+    e.preventDefault();
+		$('.modal').fadeIn();
+	});
+	$('.modal-close').click(function(e) {
+    e.preventDefault();
+		$('.modal').fadeOut();
+	});
+  $('.modal').click(function(e) {
+		if ($(e.target).closest('.modal-box').length == 0) {
+			$(this).fadeOut();
+		}
+	});
 });
