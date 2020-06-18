@@ -44,6 +44,7 @@ body {
   position: relative;
   border-radius: 5px;
   border: 1px solid rgba(255, 255, 255, 0.8);
+  animation: change 0.7s linear;
 }
 .input {
   box-shadow: 5px 5px 5px 0px #000 inset;
@@ -125,6 +126,14 @@ input::placeholder {
   line-height: 15px;
 }
 
+@keyframes change {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 
 .active {
