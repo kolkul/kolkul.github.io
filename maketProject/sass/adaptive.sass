@@ -93,7 +93,9 @@
       font-size: 14px
       margin-top: 15
       px
-  .arrow
+  .review-slider
+    max-width: 700px
+  .arrow-adv
     z-index: +1
     cursor: pointer
     position: absolute
@@ -104,12 +106,12 @@
     background-color: white
     background-size: 100%
     opacity: 0.3
-  .arrow:hover
+  .arrow-adv:hover
     opacity: 1
-  .prev
+  .prev-adv
     left: 1%
     background-image: url(../img/arrow-left.png)
-  .next
+  .next-adv
     right: 1%
     background-image: url(../img/arrow-right.png)
 
@@ -197,6 +199,14 @@
         .button-hover
           p
             font-size: 13px
+  .review-slider
+    width: 90%
+  .slider1
+    width: 100%
+  .review-box__description-block
+    margin-left: 0
+    margin-top: 15px
+    width: 100%
 
   // PLAN
 
@@ -397,10 +407,6 @@
     height: 190px
     overflow: hidden
     position: relative
-    img
-      position: absolute
-      top: -245px
-      right: -255px
   .contacts-box
     display: flex
     justify-content: center
@@ -516,7 +522,6 @@
     margin-top: 25px
 
   //ADVANTAGES
-  // !!!!
 
   .advantages__general-box
     width: 100%
@@ -599,6 +604,72 @@
       display: block
       margin-bottom: 25px
       text-align: center
+  .review-slider
+    margin: 0 auto
+    padding: 0
+    width: 100%
+    margin-top: 30px
+    max-width: 500px
+    .slick-dots li
+      margin: 0
+    .slick-dots li.slick-active button::before
+      color: #358015
+      font-size: 12px
+      margin: 0
+      padding: 0
+    .slick-dots li button::before
+      color: #358015
+      font-size: 12px
+      padding: 0
+      margin: 0
+  .slick-slider
+  .review-box
+    padding: 15px 10px
+    margin: 0
+  .slider1
+    display: block
+    width: 100%
+    max-width: 360px
+    margin: 0 auto
+  .slider-nav
+    width: 80%
+    margin: 0 auto
+  .review-box__img1
+    img
+      margin: 0 auto
+      width: 100%
+      height: 190px
+  .review-box__img2
+    img
+      margin-top: 10px
+      width: 90%
+      max-width: 75px
+      height: 55px
+  .arrow-f-s
+    z-index: 100
+    cursor: pointer
+    position: absolute
+    top: 40%
+    width: 20px
+    height: 20px
+    border: none
+    background-color: white
+    background-size: 100%
+    opacity: 0.3
+  .arrow-f-s:hover
+    opacity: 1
+  .prev-f-s
+    left: -30px
+    background-image: url(../img/arrow-left.png)
+  .next-f-s
+    right: -30px
+    background-image: url(../img/arrow-right.png)
+  .review-box__description
+    font-size: 14px
+  .review-box__descriprion-user
+    margin-top: 25px
+
+
 
   // PLAN
 

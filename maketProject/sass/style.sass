@@ -401,14 +401,12 @@ REVIEW_
   align-items: center
   font-family: 'ProximaNova-Bold', sans-serif
   font-size: 36px
-.review-container__block
-  width: 100%
-  height: 200px
 .contact-container
   position: relative
   display: flex
   justify-content: center
   align-items: center
+  margin-top: 30px
   img
     position: absolute
     left: -90px
@@ -430,6 +428,110 @@ REVIEW_
     margin-left: 25px
   .form-description
     display: none
+.review-slider
+  width: 90%
+  margin: 0 auto
+.review-box
+  box-shadow: 0px 12px 18px 0px rgba(0, 0, 0, 0.11)
+  margin: 30px 30px
+  display: inline-block
+  justify-content: center
+  padding: 50px 50px
+  background-color: #fff
+.slider1
+  display: inline-block
+  width: 50%
+.review-box__description-block
+  vertical-align: top
+  display: inline-block
+  width: 46%
+  margin-left: 35px
+.review-box__slider
+  width: 100%
+.review-box__img1
+  img
+    width: 100%
+    height: 320px
+    margin-bottom: 15px
+.review-box__img2
+  img
+    width: 70px
+    height: 55px
+.review-box__description
+  line-height: 2
+  font-family: 'ProximaNova-Regular', sans-serif
+  font-size: 16px
+  strong
+    font-family: 'ProximaNova-Bold', sans-serif
+.review-box__descriprion-user
+  margin-top: 40px
+.user-icon
+  display: inline-block
+  width: 50px
+  height: 50px
+  border-radius: 50%
+  background-image: url(../img/user-icon.png)
+.user
+  p
+    font-family: 'ProximaNova-Regular', sans-serif
+    font-size: 14px
+    display: inline-block
+    vertical-align: top
+    margin-left: 15px
+    margin-top: 5px
+    span
+      font-family: 'ProximaNova-Bold', sans-serif
+      font-size: 16px
+.description-user
+  font-family: 'ProximaNova-RegularIt', sans-serif
+  font-size: 15px
+  padding: 15px
+  border: 2px solid #00c000
+  margin-top: 20px
+  position: relative
+.description-user::after
+  content: ''
+  display: block
+  width: 15px
+  height: 15px
+  background-color: white
+  border-top: 2px solid #00c000
+  border-left: 2px solid #00c000
+  position: absolute
+  transform: rotate(45deg)
+  top: -10px
+  left: 30px
+.arrow-rev
+  position: absolute
+  border: none
+  display: block
+  width: 50px
+  height: 70px
+  top: 42%
+  background-color: #00c000
+  z-index: 50
+.prev-rev
+  left: -20px
+  &::before
+    content: ''
+    display: block
+    background: url(../img/arrow-left-light.png) center no-repeat
+    background-size: 50%
+    width: 35px
+    height: 35px
+    margin-left: 6px
+.next-rev
+  right: -20px
+  &::before
+    content: ''
+    display: block
+    background: url(../img/arrow-right-light.png) center no-repeat
+    background-size: 50%
+    width: 35px
+    height: 35px
+    margin-left: 7px
+
+
 
 PLAN
 
@@ -667,14 +769,12 @@ MATERIALS
   font-family: 'ProximaNova-Regular', sans-serif
   font-size: 19px
   line-height: 1.4
+  height: 55px
   span
     font-family: 'ProximaNova-Semibold', sans-serif
 .mat-box__link
-  height: 100%
-  display: flex
-  justify-content: center
+  text-align: center
   a
-    align-self: flex-end
     font-family: 'ProximaNova-Regular', sans-serif
     font-size: 16px
     color: #45a34c
@@ -820,10 +920,6 @@ CONTACTS
   height: 190px
   overflow: hidden
   position: relative
-  img
-    position: absolute
-    top: -245px
-    right: -255px
 .contacts-box__phone
   span
     font-family: 'ProximaNova-Bold', sans-serif
