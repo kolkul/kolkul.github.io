@@ -321,17 +321,27 @@ a.btn-cta {
 .hero-carousel .carousel-inner .intro + .btn {
   margin-top: 15px;
 }
-body>.parallax-mirror {
+.parallax-mirror:first-child {
+  display: block;
+}
+body .parallax-mirror {
+  display: block;
+  width: 100vw !important;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+}
+.parallax-mirror img {
   width: 100vw !important;
   position: absolute;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  display: none;
   background-size: cover;
-  animation: bg 0.5s linear;
-}
-.parallax-mirror:first-child {
-  display: block;
 }
 
 @keyframes bg {

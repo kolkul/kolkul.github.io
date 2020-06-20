@@ -1,0 +1,54 @@
+body {
+    color: #333333;
+    line-height: 1.5;
+}
+.header {
+    font-size: 20px;
+    margin: 20px;
+}
+.header span  {
+    display: block;
+}
+.youtube {
+    margin: 75px auto;
+}
+.form-header {
+    font-size: 20px;
+    font-weight: 650;
+    margin-bottom: 35px;
+}
+.form {
+    border: 5px solid #2727d9;
+    padding: 5%;
+}
+.form-control {
+    margin: 10px 0;
+    font-size: 16px;
+}
+.btn {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #2727d9;
+}
+.section-header {
+    font-size: 24px;
+    font-weight: 650;
+}
+.images {
+    margin: 65px auto;
+}
+.btn-down {
+    margin-top: 60px;
+    padding: 15px 50px;
+}
+.header3 {
+    font-size: 24px;
+    font-weight: 650;
+    margin-bottom: 25px;
+}
+.img-human {
+    margin-bottom: 20px;
+}
+.link-you {
+    margin-bottom: 35px;
+}
