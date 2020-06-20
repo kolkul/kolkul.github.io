@@ -33,9 +33,23 @@ $(document).ready(function() {
 
 });
 
+$('.parallax-window').parallax({
+  naturalWidth: 500,
+  naturalHeight: 400
+});
 
 $(".parallax-mirror").not(":first").hide()
 	$(".hero-section .carousel-indicator").click(function() {
 		$(".hero-section .carousel-indicator").removeClass("active").eq($(this).index()).addClass("active");
 		$(".parallax-mirror").hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass("active");
+
+$(function () {
+  var t = function () {
+  };
+  $('.carousel-indicator').on('slid.bs.carousel', function (e) {
+    $('.parallax-mirror').prepend('<li>' + ' - slid.bs.carousel</li>');
+  });
+});
+
+var rellax = new Rellax('.rellax');

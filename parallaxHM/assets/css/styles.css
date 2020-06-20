@@ -288,7 +288,9 @@ a.btn-cta {
 }
 .hero-carousel .carousel-inner .item {
   height: 560px;
-  background-position: center center;
+  position: relative;
+  background-position: top;
+  top: 0;
 }
 .hero-carousel .carousel-inner .item-1 {
   -webkit-background-size: cover;
@@ -325,24 +327,21 @@ a.btn-cta {
   display: block;
 }
 body .parallax-mirror {
-  display: block;
   width: 100vw !important;
-  position: relative;
+  position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   background-size: cover;
 }
 .parallax-mirror img {
   width: 100vw !important;
   position: absolute;
   top: 0;
-  right: 0;
   bottom: 0;
   left: 0;
+  right: 0;
   background-size: cover;
 }
+
 
 @keyframes bg {
   0% {
@@ -556,24 +555,39 @@ body .parallax-mirror {
 }
 .feature-nav > li {
   position: relative;
+
+
+
+
 }
 .feature-nav > li .fa {
   margin-right: 5px;
 }
+
 .feature-nav > li.active > a {
   color: #40babd;
   background: none;
   padding: 8px 0;
 }
+
+
 .feature-nav > li > a {
   background: none;
+
   padding: 8px 0;
+
   color: #616670;
 }
+
 .feature-nav > li > a:hover {
   background: none;
   color: #40babd;
 }
+
+.feature-content {
+
+}
+
 /* ======= Pricing Section ======= */
 .pricing-section {
   padding-top: 90px;
