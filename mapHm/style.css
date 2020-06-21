@@ -1,0 +1,90 @@
+body * {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+main {
+  display: block;
+  height: 430px; 
+}
+.container {
+  position: relative;
+  width: 950px;
+  padding: 0;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.map {
+  position: absolute;
+  display: block;
+  width: 100vw;
+  border: none;
+}
+
+.contacs {
+  display: block;
+  background-color: #c60b0b;
+  padding: 55px 65px;
+  top: 0;
+  left: 0;
+  width: 385px;
+  height: 100%;
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.4s;
+  color: #fff;
+}
+a:hover {
+  text-decoration: underline;
+}
+footer .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 0;
+}
+.logo,
+.center,
+.right {
+  width: 30%;
+}
+.logo img {
+  width: 60px;
+  height: 60px;
+}
+.logo p {
+  display: inline-block;
+  font-size: 16px;
+}
+.center p {
+  text-align: center;
+  color: #666666;
+  font-size: 14px;
+}
+.right {
+  text-align: right;
+}
+.phone {
+  font-weight: 600;
+  font-size: 22px;
+}
+.right p {
+  font-size: 14px;
+  padding-left: 55px;
+}
