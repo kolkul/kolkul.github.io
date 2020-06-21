@@ -1,9 +1,0 @@
-var browserSync = require ('browser-sync');
-
-gulp.task('browser-sync', function(){
-    browserSync.init ({
-        server: {
-            baseDir: "src/"
-        }
-    });
-});
