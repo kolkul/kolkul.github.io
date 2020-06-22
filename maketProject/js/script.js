@@ -1,3 +1,7 @@
+// wow.js
+
+        
+
 // slider
 
 $(document).ready(function(){
