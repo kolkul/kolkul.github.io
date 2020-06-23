@@ -1,6 +1,4 @@
-// wow.js
 
-        
 
 // slider
 
