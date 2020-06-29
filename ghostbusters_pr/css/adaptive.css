@@ -249,10 +249,6 @@
     width: 100px;
   }
 
-  .details__content-description {
-
-  }
-
   .rating-box {
     margin: 0;
     margin-top: 40px;
@@ -290,7 +286,6 @@
     width: 260px !important;
     height: 160px !important;
     padding: 30px;
-    margin: 10px;
   }
 
   .date {
@@ -373,5 +368,10 @@
   .news-block {
     width: 100vw;
     padding: 0;
+  }
+
+  .news-container .slick-list {
+    width: 90vw;
+    margin: 0 auto;
   }
 }
