@@ -209,6 +209,13 @@
 
   .logo{
     border-right: none;
+    height: 100%;
+  }
+
+  .logo a {
+    display: inline-block;
+    position: relative;
+    bottom: 150%;
   }
 
   main {
@@ -415,7 +422,7 @@
   }
 
   .news-block {
-    width: 100vw;
+    width: 99.5vw;
     padding: 0;
   }
 
