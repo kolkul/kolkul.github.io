@@ -63,7 +63,8 @@
 
       <div class="movie-box">
         <div class="movie-box__img"><img src="img/movie-img.jpg" alt="#"></div>
-        <button class="btn movie-box__btn">Посмотреть фильм</button>
+        <div class="movie-box__img tablet-img"><img src="img/tablet-img.jpg" alt="#"></div>
+        <button class="btn movie-box__btn"><p>Посмотреть фильм</p></button>
       </div>
 
       <div class="description-box">
@@ -270,6 +271,13 @@
 
   </section>
 
+  <!-- MODAL BOX -->
+  <div class="modal">
+    <div class="modal-box">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/t4a2HFWPhow" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
 
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="slick/slick.min.js"></script>
@@ -344,6 +352,24 @@
           }
         ]
       });
+    });
+
+    // modal
+
+    $(document).ready(function() {
+    	$('.movie-box__btn').click(function(e) {
+        e.preventDefault();
+    		$('.modal').fadeIn();
+    	});
+    	$('.modal-close').click(function(e) {
+        e.preventDefault();
+    		$('.modal').fadeOut();
+    	});
+      $('.modal').click(function(e) {
+    		if ($(e.target).closest('.modal-box').length == 0) {
+    			$(this).fadeOut();
+    		}
+    	});
     });
 
   </script>

@@ -188,6 +188,11 @@
     border-top: none;
   }
 
+  .modal-box {
+    top: 20%;
+    width: 88vw;
+  }
+
 }
 
 @media screen and (max-width: 880px) {
@@ -217,6 +222,27 @@
 
   .movie-content {
     flex-wrap: wrap;
+  }
+
+  .movie-box {
+    width: 100%;
+  }
+
+  .movie-box__img {
+    display: none;
+  }
+
+  .tablet-img {
+    display: block;
+  }
+
+  .tablet-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .movie-box__btn p:before {
+    left: 25rem;
   }
 
   .description-box {
@@ -338,6 +364,13 @@
 
 }
 
+@media screen and (max-width: 660px) {
+  .movie-box__btn p:before {
+    left: 16rem;
+  }
+
+}
+
 @media screen and (max-width: 494px) {
   .search-adv {
     display: none;
@@ -349,6 +382,22 @@
 
   header .active {
     width: 30%;
+  }
+
+  .movie-box__img {
+    display: block;
+  }
+
+  .movie-box__img img {
+    width: 100%;
+  }
+
+  .tablet-img {
+    display: none;
+  }
+
+  .movie-box__btn p:before {
+    left: 10rem;
   }
 
   .actors-box {
@@ -374,4 +423,16 @@
     width: 90vw;
     margin: 0 auto;
   }
+}
+
+@media screen and (max-width: 373px) {
+  .movie-box__img img {
+    height: 100%;
+  }
+
+  .movie-box__btn p:before {
+    left: 7rem;
+  }
+
+
 }
