@@ -388,7 +388,10 @@ main {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  animation: change 0.5s linear;
+}
+
+.tab-content .active {
+  animation: change 1s linear;
 }
 
 .actors-box {
@@ -469,12 +472,8 @@ main {
   margin-top: 6.5rem;
 }
 
-.news-slider {
-  display: inline-block;
+.news-block .news-slider {
   background-color: #fff;
-  width: 23% !important;
-  height: 16rem !important;
-  margin-right: 1.3rem;
   padding: 2.4rem;
   border: 1px solid white;
   transition: 0.2s;

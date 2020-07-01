@@ -314,8 +314,10 @@
     $(".actors-block").not(":first").hide();
     	$(".actors-container .tab").click(function() {
     		$(".actors-container .tab").removeClass("active").eq($(this).index()).addClass("active");
-    		$(".actors-block").hide().eq($(this).index()).fadeIn()
+    		$(".actors-block").hide(400).eq($(this).index()).fadeIn()
     	}).eq(0).addClass("active");
+
+
 
     // slider
     $(document).ready(function(){
@@ -323,31 +325,12 @@
         infinite: false,
         slidesToShow: 4,
         slidesToScroll: 1,
-        speed: 300,
         responsive: [
           {
-            breakpoint: 767,
+            breakpoint: 768,
             settings: {
-              slidesToShow: 2,
               arrows: true,
-              prevArrow: '<button class="arrow prev"></button>',
-              nextArrow: '<button class="arrow next"></button>'
-            }
-          },
-          {
-            breakpoint: 694,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              prevArrow: '<button class="arrow prev"></button>',
-              nextArrow: '<button class="arrow next"></button>'
-            }
-          },
-          {
-            breakpoint: 495,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
+              slidesToShow: 1
             }
           }
         ]

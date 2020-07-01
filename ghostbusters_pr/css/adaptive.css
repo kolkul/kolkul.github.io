@@ -316,8 +316,6 @@
   }
 
   .news-slider {
-    width: 260px !important;
-    height: 160px !important;
     padding: 30px;
   }
 
@@ -422,13 +420,8 @@
   }
 
   .news-block {
-    width: 99.5vw;
+    width: 100vw;
     padding: 0;
-  }
-
-  .news-container .slick-list {
-    width: 90vw;
-    margin: 0 auto;
   }
 }
 
