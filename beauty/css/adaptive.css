@@ -306,6 +306,10 @@
     max-width: 650px;
   }
 
+  .p-header__nav-block {
+    justify-content: center;
+  }
+
   /* PRODUCT SECTION */
 
   .p-product .container {
