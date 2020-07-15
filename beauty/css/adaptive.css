@@ -5,6 +5,10 @@
 
   /* HEADER */
 
+  .header-slider__block {
+    padding-bottom: 35px;
+  }
+
   .header-slider__block .container {
     flex-wrap: wrap;
     height: auto;
@@ -25,7 +29,7 @@
   }
 
   .arrows {
-    top: 60%;
+    top: 423px;
   }
 
   .prev {
@@ -140,13 +144,14 @@
   }
 
   .blog-slider {
-    margin: 0 -22px;
+    margin: 0 -8px;
   }
 
-  .blog-slider {
+  .blog-slide {
     text-align: center;
+    width: 50%;
+    margin: 0;
   }
-
   .blog-slider .main-arrow-prev {
     right: 82px;
   }
@@ -155,8 +160,12 @@
     right: 32px;
   }
 
+  .blog-slide {
+    margin: 0px;
+  }
+
   .blog-slide .slide-img {
-    height: 240px;
+    height: 260px;
   }
 
   /* INSTAGRAM SECTION */
@@ -707,6 +716,20 @@
 
   /* CATALOG-CATALOG */
 
+  .c-catalog {
+    padding-top: 35px;
+  }
+
+  /* .c-catalog .slide-btn__sale {
+    top: 0;
+    left: -30px;
+  } */
+
+  .c-catalog-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .c-sort-box {
     margin-left: 0;
   }
@@ -731,7 +754,7 @@
 
   .c-catalog-item {
     width: 100%;
-    max-width: 285px;
+    max-width: 325px;
     margin: 0px auto;
     margin-bottom: 35px;
     border-bottom: 1px solid #F5F5F5;
@@ -888,6 +911,8 @@
   .p-header__nav-block {
     justify-content: space-between;
     width: 100%;
+    -ms-align-items: flex-end;
+    align-items: flex-end;
   }
 
   .p-link-box__star-box {
@@ -911,6 +936,7 @@
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
     padding: 0;
+    margin-bottom: 15px;
   }
 
   .p-foto-block__small-img-box {
@@ -930,7 +956,7 @@
   }
 
   .p-details-block__price-block {
-    padding-top: 25px;
+    padding-top: 35px;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
@@ -938,18 +964,22 @@
     margin-bottom: 40px;
   }
 
-  .p-bg-arrow {
+  /* .p-bg-arrow {
     height: 345px;
     top: -192px;
     left: 152px;
+  } */
+
+  .p-bg-arrow {
+    display: none;
   }
 
   .p-price-block__price-box {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -ms-align-items: center;
-    align-items: center;
+    /* -ms-align-items: center;
+    align-items: center; */
   }
 
   .p-price-box__old-price {
@@ -961,12 +991,17 @@
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -ms-align-items: center;
-    align-items: center;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
   }
 
   .p-cart-box__btn {
-    margin-bottom: 20px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .p-cart-box__link {
+
   }
 
   .p-cart-box__btn,

@@ -1,6 +1,6 @@
 // HEADER SLIDER
 
-$(document).ready(function(){
+$(document).ready(function () {
   $('.header-slider').slick({
     infinite: true,
     slidesToShow: 1,
