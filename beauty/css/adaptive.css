@@ -636,6 +636,7 @@
     flex-direction: column;
     height: auto;
     margin-bottom: 15px;
+    width: 100%;
   }
 
   .comment-block__img {
