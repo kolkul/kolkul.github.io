@@ -113,6 +113,20 @@ header .container {
   margin-bottom: 50px;
 }
 
+.left-block,
+.logo-block,
+.icon-block {
+  width: 30%;
+}
+
+.logo-block {
+  justify-content: center;
+}
+
+.icon-block {
+  justify-content: flex-end;
+}
+
 .left-block {
   display: -webkit-flex;
   display: -ms-flex;
@@ -134,8 +148,16 @@ header .container {
   transition: 0.3s;
 }
 
+.l-menu-box__img svg {
+  width: 100%;
+}
+
 .l-menu-box:hover .l-menu-box__img svg path {
   fill: #FAA7A2;
+}
+
+.mob-l-menu-box__img {
+  display: none;
 }
 
 .l-menu-box__name {
@@ -148,13 +170,13 @@ header .container {
   color: #FAA7A2;
 }
 
-.l-menu-box .l-menu-box__img {
+.l-menu-box__img {
   width: 20px;
   height: 20px;
   margin-right: 13px;
 }
 
-.l-menu-box__img img {
+.l-menu-box__img svg {
   width: 100%;
 }
 
@@ -220,13 +242,13 @@ header .container {
   transition: 0.3s;
 }
 
-.icon-box:hover:nth-child(2) svg path {
-  stroke: #FAA7A2;
+.icon-box:hover svg path {
   fill: #FAA7A2;
 }
 
-.icon-box:hover svg path {
-  fill: #FAA7A2;
+.icon-box__heart:hover svg path{
+  stroke: #FAA7A2;
+  fill: none;
 }
 
 .icon-box:last-child {
@@ -364,6 +386,7 @@ header .container {
   opacity: 0;
   pointer-events: none;
   transition: 0.3s;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .i-menu-column {
@@ -578,6 +601,12 @@ header .container {
 .header-slider__item {
   width: 50%;
   height: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-slider__item img {
@@ -1237,6 +1266,26 @@ footer a:hover {
 /*!! CATALOG PAGE !!*/
 
 /* CATALOG-HEADER */
+
+.c-other-page-header {
+  background-color: #fff;
+  padding: 0;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.c-other-page-header .container {
+  border-bottom: none;
+  padding-top: 20px;
+  padding-bottom: 14px;
+}
+
+.c-other-page-header .top-header-menu {
+  margin-bottom: 0;
+}
 
 .c-header {
   background: #F1F1F1;
@@ -2090,6 +2139,12 @@ input::-webkit-inner-spin-button {
 /*!! PRODUCT PAGE !!*/
 
 /* PRODUCT HEADER */
+
+
+.p-other-page-header .container{
+  border-bottom: 1px solid #C1C1C1;
+  padding-bottom: 18px;
+}
 
 .p-header {
   padding-top: 130px;
