@@ -114,6 +114,10 @@ header {
   display: none;
 }
 
+.mob-nav {
+  display: none;
+}
+
 .header-logo {
   width: 157px;
   height: 69px;
@@ -238,6 +242,10 @@ header {
 
 .i-info-box__description {
   line-height: 24px;
+}
+
+.mob-info-block {
+  display: none;
 }
 
 /* REALTOR SECTION */
@@ -1008,4 +1016,8 @@ footer .container {
   line-height: 20px;
   letter-spacing: 0.2px;
   text-align: right;
+}
+
+.mob-center-block__description {
+  display: none;
 }
