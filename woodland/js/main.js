@@ -98,3 +98,34 @@ $('.main-button').click(function() {
   }
 
 });
+
+var isAnimate = false;
+
+$(".item").not(":first").hide();
+$('.tabs .tab').click(function() {
+
+  if (isAnimate) {
+    return;
+  } else {
+    isAnimate = true;
+  }
+
+  var index = $(this).index();
+  $('.tab.active').removeClass('active');
+
+  $('.item.active').animate({
+    opacity: 'hide'
+  }, 300, function() {
+    $(this).removeClass('active');
+    $('.tab').eq(index).addClass('active');
+
+    $('.item').eq(index).animate({
+      opacity: 'show'
+    }, 300, function() {
+      $(this).addClass('active');
+
+      isAnimate = false;
+
+    });
+  });
+});

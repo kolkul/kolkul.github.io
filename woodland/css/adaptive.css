@@ -11,6 +11,9 @@
 
   .header-section {
     padding: 64px 0;
+    background-position: 0 0;
+    -webkit-background-size: 1000px;
+    background-size: 1000px;
   }
 
   .mob-header {
@@ -19,7 +22,7 @@
     padding-bottom: 7px;
     margin-bottom: 0;
     position: relative;
-    border-bottom: 1px solid #DEDEDE;
+    box-shadow: 0px 1px 1px #DEDEDE;
     position: relative;
     z-index: 3;
     background-color: #fff;
@@ -181,6 +184,13 @@
   .hidden-list__item {
     margin-bottom: 32px;
     width: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 26px;
   }
 
   .hidden-list__box {
@@ -193,6 +203,25 @@
 
   .hidden-list__box .hidden-list__item {
     width: 48%;
+  }
+
+  .arrow-down {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    width: 10px;
+    height: 6px;
+  }
+
+  .arrow-down svg {
+    width: 100%;
+  }
+
+  .hidden-list__item:hover .arrow-down svg path {
+    fill: #000;
   }
 
   /* REALTOR SECTION */
@@ -339,6 +368,121 @@
   .mob-center-block__description {
     display: block;
   }
+
+  /*!!! LISTINGS PAGE !!!*/
+
+  /* L-HEADER SECTION */
+
+  .l-header-section {
+    display: none;
+  }
+
+  /* L-TEXT SECTION */
+
+  .l-text-section {
+    padding: 64px 0;
+  }
+
+  .l-text-block {
+    width: 100%;
+  }
+
+  .l-text-block h2 {
+    margin-bottom: 32px;
+  }
+
+  .l-text__description {
+    margin-top: 48px;
+  }
+
+  .l-text__btn {
+    max-width: 370px;
+  }
+
+  .l-human-block {
+    display: none;
+  }
+
+  /* L-SEARCH SECTION */
+
+  .l-search-filter-block {
+    display: none;
+  }
+
+  .l-mob-filter-block {
+    margin-bottom: 24px;
+  }
+
+  .l-mob-filter {
+    color: #000;
+    border: 1px solid #EAEAEA;;
+  }
+
+  .l-mob-filter:hover {
+    color: #fff;
+    background-color: #000;
+  }
+
+  .l-mob-filter:hover .arrow-down svg path {
+    fill: #fff;
+  }
+
+  .tabs-block {
+    margin-bottom: 32px;
+  }
+
+  .l-offer-block {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-align-items: center;
+    align-items: center;
+  }
+
+  .l-offer-box {
+    width: 100%;
+    max-width: 368px;
+    margin: 0;
+    margin-bottom: 32px;
+  }
+
+  .l-offer-box:last-child {
+    margin-bottom: 0;
+  }
+
+  .l-offer-page-number-block {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .l-offer-block-description {
+    width: 100%;
+  }
+
+  /* I-IDEA SECTION */
+
+  .l-idea-section {
+    padding-top: 64px;
+  }
+
+  .l-idea-section .container {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .l-idea-img {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .l-idea-text-block {
+    width: 100%;
+  }
+
+  .l-idea-text-block h2 {
+    margin-bottom: 32px;
+  }
 }
 
 @media screen and (max-width: 739px) {
@@ -427,5 +571,21 @@
     align-items: flex-start;
   }
 
+  /*!!! LISTINGS PAGE !!!*/
 
+  /* L-SEARCH SECTION */
+
+  .l-search-map-result {
+    height: 220px;
+  }
+
+  .l-offer-page-number-block {
+    justify-content: flex-start;
+  }
+
+  /* L-IDEA SECTION */
+
+  .l-idea-section {
+    display: none;
+  }
 }
