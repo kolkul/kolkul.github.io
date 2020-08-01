@@ -89,7 +89,7 @@ $('.main-button').click(function() {
     if ($(this).hasClass('active')) {
 
       $(this).removeClass('active');
-      $('.hidden-list-block').animate({
+      $('.i-mob-dropdown-section').animate({
         height: 'hide'
       }, 500, function() {
         isReviewsAnimate = false;
@@ -98,7 +98,7 @@ $('.main-button').click(function() {
     } else {
 
       $(this).addClass('active');
-        $('.hidden-list-block').animate({
+        $('.i-mob-dropdown-section').animate({
         height: 'show'
       }, 500, function() {
         isReviewsAnimate = false;
@@ -109,7 +109,7 @@ $('.main-button').click(function() {
     if ($(this).hasClass('active')) {
 
       $(this).removeClass('active');
-      $('.i-search-filter-container').animate({
+      $('.i-dropdown-section').animate({
         width: 'hide'
       }, 500, function() {
         isReviewsAnimate = false;
@@ -118,7 +118,7 @@ $('.main-button').click(function() {
     } else {
 
       $(this).addClass('active');
-        $('.i-search-filter-container').animate({
+        $('.i-dropdown-section').animate({
         width: 'show'
       }, 500, function() {
         isReviewsAnimate = false;
@@ -164,10 +164,101 @@ $('.tabs .tab').click(function() {
 
 // Slider fotorama (listings.html)
 
-if (window.innerWidth < 1280) {
-  $('.fotorama').getAttribute('data-maxheight');
-  $('.fotorama').removeAttribute('data-maxheight');
-  $('.fotorama').setAttribute('data-maxheight', '220' + 'px')
-} else {
-  $('.fotorama')
+
+
+// Dropdown
+
+$('.dropdown__value').click(function () {
+
+  if ($(this).closest('.dropdown').hasClass('active')) {
+    $(this).closest('.dropdown').toggleClass('active');
+  } else {
+    $('.dropdown').removeClass('active');
+    $(this).closest('.dropdown').toggleClass('active');
+  }
+});
+
+$('.dropdown__list li').click(function () {
+  var value = $(this).text().trim();
+  $(this).closest('.dropdown').find('input').attr('value', value);
+  $(this).closest('.dropdown').find('.dropdown__value span').html(value);
+  $('.dropdown').removeClass('active');
+});
+
+$(document).mouseup(function (e) {
+
+  if (!$('.dropdown').is(e.target) && $('.dropdown').has(e.target).length === 0) {
+    $('.dropdown').removeClass('active');
+  }
+
+});
+
+
+// A3 slider
+
+if ($('.a3-slider-block').length && window.innerWidth < 1280) {
+
+  $('.a3-slider-block').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    centerMode: true,
+    variableWidth: true,
+    responsive: [{
+      breakpoint: 1280,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 740,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    ]
+  });
+
+  $('.a3-slider-block').on('afterChange', function(event, slick, currentSlide, nextSlide) {
+    a3sliderLine();
+  });
+
+  a3sliderLine();
 }
+
+// Slider's line
+
+function a3sliderLine() {
+
+  $('.slider-with-line').each(function () {
+
+    var slidesCount = $(this).find('.slick-dots li').length;
+    var lineWidth = 100 / slidesCount;
+
+    $('.a3-slider-s-line').css({width: lineWidth + '%'});
+
+    var linePieceWidth = $(this).find('.a3-slider-s-line').width();
+    var activeSlideIndex = $(this).find('.slick-dots li.slick-active').index();
+
+    $(this).find('.a3-slider-s-line').css({transform: 'translateX(' + (linePieceWidth * activeSlideIndex) + 'px)'});
+
+  });
+
+}
+
+
+// fotorama(adaptation)
+
+if (window.innerWidth < 740 && $('.l2-slider-block').length)  {
+  $('.l2-slider-block').attr('data-maxheight', '220px')
+}
+
+// Animation
+
+$(document).ready(function(){
+  $('.i-info-box').addClass('active')
+});
