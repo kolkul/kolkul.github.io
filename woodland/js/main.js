@@ -259,6 +259,6 @@ if (window.innerWidth < 740 && $('.l2-slider-block').length)  {
 
 // Animation
 
-$(document).ready(function(){
+$(window).on('load', function(){
   $('.i-info-box').addClass('active')
 });
