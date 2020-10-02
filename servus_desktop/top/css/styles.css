@@ -1,0 +1,230 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+	/* Запрет зума текста на телефоне */
+	-webkit-text-size-adjust: 100%;
+	/* Сглаживание шрифтов */
+	-webkit-font-smoothing: antialiased;
+	position: relative;
+}
+
+body.no-scroll {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	overflow: hidden;
+}
+
+body * {
+	margin: 0px;
+	padding: 0px;
+	outline: 0;
+	background-repeat: no-repeat;
+	background-position: center;
+	font-weight: normal;
+	font-style: normal;
+	/* Учёт размеров элементов, включая margin, padding и border */
+	box-sizing: border-box;
+	/* Исправляет баг скроллинга на IOS */
+	-webkit-overflow-scrolling: touch;
+	/* Убирает подсветку элемента при касании на телефоне */
+	-webkit-tap-highlight-color: transparent;
+	/* Убирает базовые стили браузера */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+/* Убирает скругления кнопок на IOS */
+
+input {
+	border-radius: 0;
+}
+
+/* Удаление кнопок, которые браузер вставляет в input */
+input::-ms-reveal,
+input::-ms-clear {
+	display: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	transition: 0.4s;
+}
+
+img {
+	border: none;
+	/* Запрет перетаскивания изображений */
+	-webkit-user-drag: none;
+}
+#hellopreloader {
+	position: absolute;
+}
+#hellopreloader_preload {
+    display: block;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #222222 url('../img/audio.svg') center center no-repeat;
+    background-size: 41px;
+}
+.twentytwenty-handle{
+	top: 150px;
+}
+
+.page-container {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.page {
+	display: -ms-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: flex-end;
+	justify-content: flex-start;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+/* slider 1 */
+
+.slide-1 {
+	z-index: -1;
+}
+.bg {
+	left: 50%;
+	transform: translateX(-50%);
+}
+.slide-1 .bg {
+	position: absolute;
+	top: 0;
+	display: -ms-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	background: url('../img/back1.jpg') repeat top / auto 100%;
+	-webkit-background-size: cover;
+	background-size: cover;
+
+}
+
+/* slider 2 */
+
+.slide-2 .bg {
+	position: absolute;
+	top: 0;
+	display: -ms-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	background: url('../img/back2.jpg') repeat top / auto 100%;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.slide-2 .text.active {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+/* video */
+
+.video {
+	display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+	bottom: 0;
+  right: 0;
+  left: 0;
+  height: 95vh;
+  margin: auto;
+  -webkit-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
+  -webkit-transform: translateY(-120vh);
+  -ms-transform: translateY(-120vh);
+  transform: translateY(-120vh);
+  opacity: 0;
+}
+
+.video.active {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.video video {
+  height: 100%;
+	border-radius: 5px;
+}
+
+.slide-1 .video video {
+	border: 5px solid #84cce1;
+}
+
+.slide-2 .video video {
+	border: 5px solid #fba93a;
+}
+
+.icon {
+  position: absolute;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+	top: 0;
+	bottom: 0;
+	width: 180vh;
+  -webkit-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
+  opacity: 1;
+}
+
+.icon img {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+  height: 30vh;
+	width: auto;
+}
+
+.icon.hide {
+  opacity: 0;
+}

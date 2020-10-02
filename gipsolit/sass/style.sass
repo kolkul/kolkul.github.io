@@ -1,0 +1,1022 @@
+@import "font.css"
+
+body
+  margin: 0
+  padding: 0
+  overflow-x: hidden
+  /* Запрет зума текста на телефоне */
+  -webkit-text-size-adjust: 100%
+  /* Сглаживание шрифтов */
+  -webkit-font-smoothing: antialiased
+
+body.no-scroll
+  height: 100%
+  width: 100%
+  position: fixed
+  overflow: hidden
+
+body *
+  margin: 0px
+  padding: 0px
+  outline: 0
+  background-repeat: no-repeat
+  background-position: center
+  font-weight: normal
+  font-style: normal
+  /* Учёт размеров элементов, включая margin, padding и border */
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  /* Исправляет баг скроллинга на IOS */
+  -webkit-overflow-scrolling: touch
+  /* Убирает подсветку элемента при касании на телефоне */
+  -webkit-tap-highlight-color: transparent
+  /* Убирает базовые стили браузера */
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  --animate-delay: 0.2s
+
+/* Убирает скругления кнопок на IOS */
+input
+  border-radius: 0
+
+/* Удаление кнопок, которые браузер вставляет в input */
+input::-ms-reveal,
+input::-ms-clear
+  display: none
+
+li
+  list-style-type: none
+
+a
+  text-decoration: none
+  -webkit-transition: 0.4s
+  -o-transition: 0.4s
+  transition: 0.4s
+
+img
+  border: none
+  /* Запрет перетаскивания изображений */
+  -webkit-user-drag: none
+
+.page
+  position: relative
+  width: 100%
+  overflow: hidden
+.container
+  width: 1276px
+  margin: auto
+
+HEADER
+
+.header
+  display: flex
+  justify-content: center
+  background-image: url(../img/header-bcg.jpg)
+  background-size: cover
+  height: 680px
+  width: 100%
+  flex-wrap: wrap
+  .header-logo
+    width: 100%
+    .header__right:first-child
+      display: none
+    .container
+      margin-top: 10px
+      display: flex
+      justify-content: space-between
+$radius: 0.4em
+$shadow: 0 2px 5px rgba(0,0,0,0.5)
+$bcg-color: #ffb500
+@mixin btn
+  font-family: 'ProximaNova-Semibold'
+  text-transform: uppercase
+  font-size: 13px
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 250px
+  height: 50px
+  background-color: $bcg-color
+  border-radius: $radius
+  color: #fff
+  transition: 0.4s
+  position: relative
+  box-shadow: $shadow
+.header__right
+  display: flex
+  justify-content: center
+  align-items: center
+  .phone
+    font-family: 'ProximaNova-Bold'
+    font-size: 20px
+    margin-right: 20px
+.button
+  +btn
+  margin-left: 15px
+.button-hover
+  +btn
+  width: 100%
+  height: 100%
+  position: absolute
+  cursor: pointer
+  opacity: 0
+  transition: 0.4s
+  background: linear-gradient(to top, #ee9d03, #ffbb00)
+.button:hover .button-hover
+  opacity: 1
+
+header form
+
+.header-form
+  width: 100%
+  height: 510px
+  position: relative
+  margin-top: 70px
+  .container
+    display: flex
+    justify-content: space-between
+.container-name
+  width: 50%
+  padding-left: 10px
+.name
+  margin-bottom: 30px
+.name__main
+  text-transform: uppercase
+  font-family: 'ProximaNova-Bold', sans-serif
+  font-size: 40px
+  margin-bottom: 20px
+.name__description
+  font-family: 'ProximaNova-Regular', sans-serif
+  font-size: 24px
+  width: 50%
+.container-name__btn
+  padding: 25px 40px
+  font-family: 'ProximaNova-Semibold', sans-serif
+  font-size: 18px
+  width: 225px
+  text-align: center
+  background-color: #00c939
+  color: white
+  strong
+    font-size: 30px
+  sup
+    font-size: 10px
+  margin-bottom: 25px
+  margin-left: 15px
+.btn-description
+  font-family: 'ProximaNova-Bold', sans-serif
+  font-size: 22px
+  text-transform: uppercase
+
+FORM
+
+.container-form
+  display: flex
+  justify-content: flex-end
+.container-form__box
+  max-width: 360px
+  width: 100%
+.form-box
+  background-color: white
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 50px
+  flex-wrap: wrap
+.form-box__header
+  font-family: 'ProximaNova-Regular', sans-serif
+  font-size: 18px
+  text-align: center
+  strong
+    font-family: 'ProximaNova-Bold', sans-serif
+$gray: #dedede
+@mixin input
+  width: 100%
+  margin-top: 10px
+  height: 100%
+  border-radius: $radius
+  border: 1px solid $gray
+  padding: 20px 0
+  text-align: center
+  transition: 0.4s
+  font-family: 'ProximaNova-Regular', sans-serif
+  font-size: 15px
+  text-transform: capitalize
+.form-box__input
+  width: 100%
+  display: flex
+  position: relative
+  margin-top: 20px
+  transition: 0.4s
+  .input-description
+    display: flex
+    justify-content: center
+    width: 100%
+    font-family: 'ProximaNova-Regular', sans-serif
+    font-size: 13px
+    position: absolute
+    transition: 0.4s
+    span
+      color: #565656
+      background: white
+      padding: 4px 10px
+      transition: 0.4s
+.input
+  +input
+  &:focus
+    border: 1px solid black
+  &:focus + .input-description
+    span
+      color: black
+.form-box__input:hover .input
+  border: 1px solid black
+.form-box__input:hover .input-description,
+.form-box__input:focus .input-description
+  span
+    transition: 0.4s
+    color: black
+.form-box
+  .button
+    width: 100%
+    margin: 25px 0
+    padding: 0
+    & .button-hover
+      margin: 0
+.form-box__description
+  text-align: center
+  font-family: 'ProximaNova-Regular', sans-serif
+  font-size: 13px
+  color: #565656
+.form-description
+  font-family: 'ProximaNova-Regular', sans-serif
+  font-size: 13px
+  color: #565656
+
+ADVANTAGES
+
+.advantages__header
+  font-family: 'ProximaNova-Bold', sans-serif
+  font-size: 36px
+  text-align: center
+  margin: 50px 0
+.advantages__general-box
+  display: flex
+.advantages__box
+  width: 25%
+  text-align: center
+  .advantages__box-img
+    margin: 10px 0px
+.advantages__img
+  display: flex
+  height: 100px
+  align-items: center
+  justify-content: center
+  img
+    display: block
+.advantages__img-description
+  padding: 15px 35px
+  margin: 20px 0
+  strong
+    font-family: 'ProximaNova-Bold', sans-serif
+    font-size: 20px
+  p
+    font-family: 'ProximaNova-Light', sans-serif
+    font-size: 16px
+    margin-top: 15px
+    a
+      color: #00b400
+      text-decoration: underline
+
+PRICE
+
+.price-container
+  background-image: url(../img/price-bcg.jpg)
+  background-repeat: repeat
+  padding: 50px 0
+.price-container__name
+  position: relative
+  display: flex
+  flex-flow: column
+  align-items: center
+  color: white
+  line-height: 2
+  margin-bottom: 50px
+  strong
+    font-family: 'ProximaNova-Bold', sans-serif
+    font-size: 36px
+  p
+    font-family: 'ProximaNova-Regular', sans-serif
+    font-size: 18px
+  .button
+    position: absolute
+    align-self: flex-end
+    align-content: flex-end
+    width: 380px
+    top: 15px
+    .button-hover
+      p
+        font-family: 'ProximaNova-Semibold', sans-serif
+        font-size: 18px
+    p
+      font-family: 'ProximaNova-Semibold', sans-serif
+      font-size: 18px
+.price-container__block
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+.price-box
+  background-color: white
+  width: 400px
+  text-align: center
+  padding: 35px 50px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: flex-start
+  &:last-of-type
+    align-content: flex-end
+.price-box__name
+  font-family: 'ProximaNova-Bold', sans-serif
+  font-size: 19px
+  margin: 15px 0
+.price-box__img
+  margin-top: 35px
+  width: 300px
+  height: 200px
+  overflow: hidden
+  img
+    width: 100%
+.price
+  margin: 25px auto
+  font-size: 18px
+  font-family: 'ProximaNova-Bold', sans-serif
+  strong
+    font-size: 30px
+  sup
+    font-size: 10px
+.list
+  font-family: 'ProximaNova-Regular', sans-serif
+  font-size: 18px
+  margin-bottom: 30px
+  li
+    margin-top: 5px
+  li::before
+    content: ''
+    display: inline-block
+    width: 15px
+    height: 10px
+    background-image: url(../img/tick-icon.png)
+    background-repeat: no-repeat
+    background-position: bottom
+    position: relative
+    margin-bottom: 2px
+    margin-right: 10px
+.m-list
+  display: none
+.box-button
+  display: flex
+  flex-grow: 1
+  align-items: flex-end
+.price-box
+  .button
+    margin: 0
+    width: 210px
+    height: 65px
+    font-size: 18px
+    .button-hover
+      font-size: 18px
+.price-container-btn
+  display: none
+
+REVIEW_
+
+.review-container
+  background-image: url(../img/review-bcg.jpg)
+  background-repeat: repeat
+  padding-top: 50px
+.review-container__name
+  display: flex
+  justify-content: center
+  align-items: center
+  font-family: 'ProximaNova-Bold', sans-serif
+  font-size: 36px
+.contact-container
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-top: 30px
+  img
+    position: absolute
+    left: -90px
+.contact-container
+  .form-box
+    padding: 50px
+    width: 820px
+    margin-bottom: 72px
+    .form-box__header
+      font-family: 'ProximaNova-Bold', sans-serif
+      font-size: 22px
+    .form-box__input
+      width: 255px
+    .button
+      width: 255px
+      margin-bottom: 0
+.contact-container
+  & .form-box :nth-child(3)
+    margin-left: 25px
+  .form-description
+    display: none
+.review-slider
+  width: 90%
+  margin: 0 auto
+.review-box
+  box-shadow: 0px 12px 18px 0px rgba(0, 0, 0, 0.11)
+  margin: 30px 30px
+  display: inline-block
+  justify-content: center
+  padding: 50px 50px
+  background-color: #fff
+.slider1
+  display: inline-block
+  width: 50%
+.review-box__description-block
+  vertical-align: top
+  display: inline-block
+  width: 46%
+  margin-left: 35px
+.review-box__slider
+  width: 100%
+.review-box__img1
+  img
+    width: 100%
+    height: 320px
+    margin-bottom: 15px
+.review-box__img2
+  img
+    width: 70px
+    height: 55px
+.review-box__description
+  line-height: 2
+  font-family: 'ProximaNova-Regular', sans-serif
+  font-size: 16px
+  strong
+    font-family: 'ProximaNova-Bold', sans-serif
+.review-box__descriprion-user
+  margin-top: 40px
+.user-icon
+  display: inline-block
+  width: 50px
+  height: 50px
+  border-radius: 50%
+  background-image: url(../img/user-icon.png)
+.user
+  p
+    font-family: 'ProximaNova-Regular', sans-serif
+    font-size: 14px
+    display: inline-block
+    vertical-align: top
+    margin-left: 15px
+    margin-top: 5px
+    span
+      font-family: 'ProximaNova-Bold', sans-serif
+      font-size: 16px
+.description-user
+  font-family: 'ProximaNova-RegularIt', sans-serif
+  font-size: 15px
+  padding: 15px
+  border: 2px solid #00c000
+  margin-top: 20px
+  position: relative
+.description-user::after
+  content: ''
+  display: block
+  width: 15px
+  height: 15px
+  background-color: white
+  border-top: 2px solid #00c000
+  border-left: 2px solid #00c000
+  position: absolute
+  transform: rotate(45deg)
+  top: -10px
+  left: 30px
+.arrow-rev
+  position: absolute
+  border: none
+  display: block
+  width: 50px
+  height: 70px
+  top: 42%
+  background-color: #00c000
+  z-index: 50
+.prev-rev
+  left: -20px
+  &::before
+    content: ''
+    display: block
+    background: url(../img/arrow-left-light.png) center no-repeat
+    background-size: 50%
+    width: 35px
+    height: 35px
+    margin-left: 6px
+.next-rev
+  right: -20px
+  &::before
+    content: ''
+    display: block
+    background: url(../img/arrow-right-light.png) center no-repeat
+    background-size: 50%
+    width: 35px
+    height: 35px
+    margin-left: 7px
+
+
+
+PLAN
+
+.plan-container
+  position: relative
+  display: flex
+  justify-content: flex-end
+  overflow: hidden
+  background: url(../img/plan-head.png) right -20px bottom -150px no-repeat
+  background-size: contain
+.plan-container__top
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  margin-top: 50px
+  .plan-container__name
+    font-family: 'ProximaNova-Bold', sans-serif
+    font-size: 36px
+  .plan-container__name-description
+    font-family: 'ProximaNova-Regular', sans-serif
+    font-size: 16px
+    margin-top: 25px
+    margin-bottom: 15px
+.plan-block
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-bottom: 75px
+.plan-box
+  width: 33%
+  display: flex
+  justify-content: flex-start
+  flex-direction: column
+  margin-top: 35px
+  &__img
+    display: flex
+    align-items: center
+    height: 120px
+    text-align: left
+    margin-bottom: 30px
+.plan-box__name
+  width: 60%
+  font-family: 'ProximaNova-Bold', sans-serif
+  font-size: 22px
+.plan-box__description
+  width: 65%
+  font-family: 'ProximaNova-Regular', sans-serif
+  font-size: 18px
+
+ALLINCLUSIVE
+
+.allinc-container
+  background-color: #f5f5f5
+  .container
+    padding: 50px 0
+.allinc-container__top
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-flow: column
+  line-height: 2
+  .allinc-container__name
+    font-family: 'ProximaNova-Bold', sans-serif
+    font-size: 48px
+    color: #008100
+  .allinc-container__name-description
+    font-family: 'ProximaNova-Regular', sans-serif
+    font-size: 16px
+.allinc-block
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  margin: 50px 0
+  .allinc-box
+    display: flex
+    flex-basis: 25%
+    margin: 25px 0
+.allinc-box__number-block
+  height: 100%
+.allinc-box__number-box
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 0
+  width: 45px
+  height: 45px
+  border: 3px solid #008100
+  border-radius: 2em
+.allinc-box__number
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: #008100
+  border: 1px solid #008100
+  padding-top: 1px
+  padding-left: 2px
+  width: 85%
+  height: 85%
+  margin-left: 1px
+  border-radius: 2em
+  font-family: 'ProximaNova-Bold', sans-serif
+  font-size: 20px
+  color: white
+.allinc-box__name-box
+  padding: 10px 10px
+.allinc-box__name
+  font-family: 'ProximaNova-Bold', sans-serif
+  font-size: 16px
+  span
+    font-family: 'ProximaNova-Light', sans-serif
+    font-size: 13px
+
+DISPEL
+
+.dispel-container
+  .container
+    position: relative
+.img-girl
+  position: absolute
+  bottom: -100px
+  left: 440px
+.dispel-container__name
+  margin: 100px 0
+  display: flex
+  justify-content: center
+  align-items: center
+  font-family: 'ProximaNova-Bold', sans-serif
+  font-size: 36px
+  span
+    display: none
+.dispel-block
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+  margin-bottom: 100px
+  .dispel-box-M,
+  .dispel-box-P
+    width: 43%
+
+mixin
+
+@mixin dispel-box
+  border: 4px solid #e8e8e8
+  padding: 50px 20px 30px 50px
+@mixin box__name
+  font-family: 'ProximaNova-Bold', sans-serif
+  font-size: 21px
+  color: #969696
+  margin-bottom: 35px
+@mixin box__description-box
+  display: flex
+  height: 60px
+  margin-top: 5px
+@mixin box__icon
+  content: ''
+  background-image: url(../img/cross-icon.png)
+  background-repeat: no-repeat
+  display: block
+  width: 20px
+  height: 20px
+  margin-top: 5px
+@mixin box__description
+  padding-top: 4px
+  margin-left: 20px
+  font-family: 'ProximaNova-Regular', sans-serif
+  font-size: 16px
+
+.dispel-box-M
+  +dispel-box
+.box-M__name
+  +box__name
+.box-M__description-box
+  +box__description-box
+  .box-M__cross::before
+    +box__icon
+.box-M__description
+  +box__description
+.dispel-box-P
+  +dispel-box
+  border: 4px solid #008100
+.box-P__name
+  +box__name
+  color: black
+.box-P__description-box
+  +box__description-box
+  .box-P__tick::before
+    +box__icon
+    background-image: url(../img/tick-icon-2.png)
+  .box-M__description
+    display: none
+.box-P__description
+  +box__description
+  span
+    display: none
+
+MATERIALS
+
+.mat-container
+  padding: 50px 0
+  background-image: url(../img/review-bcg.jpg)
+.mat-container__name-block
+  margin: 50px 0
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  .mat-container__name
+    font-family: 'ProximaNova-Bold', sans-serif
+    font-size: 36px
+    margin-bottom: 25px
+  .mat-container__name-description
+    font-family: 'ProximaNova-Regular', sans-serif
+    font-size: 19px
+.mat-block
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+  .mat-box
+    display: flex
+    flex-direction: column
+    width: 25%
+.mat-box__img
+  display: flex
+  height: 180px
+  justify-content: center
+  align-items: center
+.mat-box__name
+  text-align: center
+  font-family: 'ProximaNova-Bold', sans-serif
+  font-size: 22px
+.mat-box__name-description
+  margin: 15px 0
+  text-align: center
+  font-family: 'ProximaNova-Regular', sans-serif
+  font-size: 19px
+  line-height: 1.4
+  height: 55px
+  span
+    font-family: 'ProximaNova-Semibold', sans-serif
+.mat-box__link
+  text-align: center
+  a
+    font-family: 'ProximaNova-Regular', sans-serif
+    font-size: 16px
+    color: #45a34c
+    text-decoration: underline
+    text-decoration-color: #7ec891
+.mat-container__description
+  margin: 50px 0
+  text-align: center
+  font-family: 'ProximaNova-Regular', sans-serif
+  font-size: 20px
+  span
+    font-family: 'ProximaNova-Bold', sans-serif
+  a
+    color: #009225
+    text-decoration: underline
+    text-decoration-color: #7ec891
+
+CHECK
+
+.check-container
+  background-image: url(../img/check-bcg.jpg)
+  padding: 110px 0
+.check-block
+  display: flex
+  justify-content: center
+  align-items: center
+  .check-box,
+  .check-box__form
+    width: 49%
+.check-box
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: flex-start
+.check-box__name
+  padding-right: 270px
+  font-family: 'ProximaNova-Bold', sans-serif
+  font-size: 40px
+  text-transform: uppercase
+  line-height: 1.5
+.check-box__name-description,
+.check-box__name-description2
+  margin: 20px 0
+  padding-right: 130px
+  font-family: 'ProximaNova-Regular', sans-serif
+  font-size: 24px
+.check-box__form
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  .form-box
+    width: 360px
+    .button
+      p
+        font-family: 'ProximaNova-Semibold', sans-serif
+        font-size: 14px
+
+ADDITIONAL SERVICES
+
+.addSer-container
+  background-image: url(../img/price-bcg.jpg)
+  background-repeat: repeat
+  padding: 100px 0
+.addSer-container__name-block
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  margin-bottom: 50px
+.addSer-container__name,
+.addSer-container__name-description
+  color: white
+  text-align: center
+.addSer-container__name
+  font-family: 'ProximaNova-Bold', sans-serif
+  font-size: 36px
+.addSer-container__name-description
+  font-family: 'ProximaNova-Regular', sans-serif
+  font-size: 19px
+  margin-top: 25px
+.addSer-block
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .addSer-box
+    width: 33%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+.addSer-box__img-box
+  width: 330px
+  height: 175px
+  overflow: hidden
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+.addSer-box:first-child
+  .addSer-box__img-box
+    img
+      position: absolute
+      top: -30px
+.addSer-box__name
+  text-align: center
+  font-family: 'ProximaNova-Bold', sans-serif
+  font-size: 20px
+  color: white
+  margin: 25px 0
+.addSer-box__btn
+  .button
+    width: 150px
+    p
+      font-family: 'ProximaNova-Bold', sans-serif
+      font-size: 16px
+
+CONTACTS
+
+iframe
+  width: 100%
+  height: 200px
+  border: none
+.contacts-container
+  background-image: url(../img/contacts-bcg.jpg)
+  padding: 50px 0
+.map
+  display: none
+.contacts-block
+  display: flex
+  .contacts-box,
+  .contacts-box__form
+    width: 50%
+    display: flex
+.contacts-box
+  font-family: 'ProximaNova-Regular', sans-serif
+  font-size: 18px
+  line-height: 1.6
+  flex-direction: column
+  div
+    margin-bottom: 25px
+  .contacts-box__name
+    font-family: 'ProximaNova-Bold', sans-serif
+    font-size: 36px
+    margin-bottom: 45px
+.contacts-box__map
+  width: 625px
+  height: 190px
+  overflow: hidden
+  position: relative
+.contacts-box__phone
+  span
+    font-family: 'ProximaNova-Bold', sans-serif
+.contacts-box__email
+  a
+    color: black
+    text-decoration: underline
+    text-decoration-color: #9f9f9f
+.contacts-box__form
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  .form-box
+    padding: 20px 40px
+    width: 350px
+  .form-box__input:nth-child(5)
+    height: 120px
+    .input
+      display: inline
+      text-align: left
+      padding: 15px 15px
+
+FOOTER
+
+.footer-block
+  display: flex
+  justify-content: space-between
+  padding: 10px 0 20px 0
+  div
+    width: 33.3%
+.footer-logo
+  display: flex
+  align-items: center
+.footer-center
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  justify-content: center
+  font-family: 'ProximaNova-Regular', sans-serif
+  font-size: 17px
+  .phone
+    width: 100%
+    text-align: center
+    font-family: 'ProximaNova-Bold', sans-serif
+    font-size: 20px
+  .email,
+  .open
+    text-align: center
+    width: 100%
+    text-decoration: underline
+    text-decoration-color: #9f9f9f
+    color: black
+    margin-top: 3px
+.footer-right
+  padding-top: 5px
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  .footer-right__name
+    font-family: 'ProximaNova-Light', sans-serif
+    font-size: 11px
+    text-align: right
+    padding-left: 75px
+
+MODAL
+
+.modal
+  display: none
+  position: fixed
+  width: 100vw
+  height: 100vh
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background-color: rgba(0, 0, 0, 0.5)
+.modal-box
+  position: absolute
+  top: 10%
+  right: 50%
+  transform: translateX(50%)
+  width: 27%
+.modal-close
+  cursor: pointer
+  position: absolute
+  top: -5px
+  right: -17px
+  background: transparent
+  border: none
+  font-size: 20px
+  color: white
+.modal-form
+  .form-box__input
+    margin-top: 5px

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title></title>
+
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="js/lib/twentytwenty/css/foundation.css">
+	<link rel="stylesheet" type="text/css" href="js/lib/twentytwenty/css/twentytwenty.css">
+	<link rel="stylesheet" type="text/css" href="js/lib/twentytwenty/css/twentytwenty-no-compass.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css?v=1">
+	<meta name="viewport" content="width=device-width">
+	<meta name="format-detection" content="telephone=no">
+
+</head>
+
+<body>
+	<!-- <div id="debug" style="position:absolute;top:0;left:0;z-index:1;background:#fff"></div> -->
+	<div id="hellopreloader"><div id="hellopreloader_preload"></div></div>
+	<div class="page-container">
+		<div class="page slide-1 before">
+			<div class="bg"></div>
+			<div class="logo">
+				<img src="img/logo.png" alt="">
+			</div>
+			<h1 class="text-box">
+				Wie viele Herzen<br>hat ein Oktopus?
+			</h2>
+
+			<div class="btn btn-1 false">Zwei</div>
+
+			<div class="btn btn-2 true">Drei</div>
+
+			<div class="bot-text">
+				<p>DOPPELT QUIZZT BESSER.</p>
+				<span>DER NEUE VORABEND</span>
+			</div>
+
+			<div class="bot-text__description">
+				<p>MO - FR</p>
+				<p>18:25 I QUIZMASTER</p>
+				<p>19:10 I QUIZJAGD</p>
+			</div>
+
+			<div class="bot-bg">
+				<img src="img/bottom-bg.png" alt="">
+			</div>
+
+			<div class="bot-img">
+				<img src="img/bot-img.png" alt="">
+			</div>
+
+			<div class="white-bg"></div>
+		</div>
+
+
+		<div class="page slide-2 after">
+			<div class="bg"></div>
+			<div class="logo">
+				<img src="img/logo.png" alt="">
+			</div>
+
+
+			<div class="name-logo">
+				<img src="img/img-1.png" alt="">
+			</div>
+
+
+			<div class="man-img">
+				<img src="img/man-1.png" alt="">
+			</div>
+
+			<div class="bot-text">
+				<p>DOPPELT QUIZZT BESSER.</p>
+				<span>DER NEUE VORABEND</span>
+			</div>
+
+			<div class="bot-text__description">
+				<p>MO - FR</p>
+				<p>18:25 I QUIZMASTER</p>
+				<p>19:10 I QUIZJAGD</p>
+			</div>
+
+			<div class="bot-bg">
+				<img src="img/bottom-bg.png" alt="">
+			</div>
+
+			<div class="bot-img">
+				<img src="img/bot-img.png" alt="">
+			</div>
+
+			<div class="white-bg"></div>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/lib/twentytwenty/js/jquery.event.move.js"></script>
+	<script src="js/lib/twentytwenty/js/jquery.twentytwenty.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+		var hellopreloader = document.getElementById("hellopreloader_preload");
+
+		function fadeOutnojquery(el) {
+			el.style.opacity = 1;
+			var interhellopreloader = setInterval(function() {
+				el.style.opacity = el.style.opacity - 0.05;
+				if (el.style.opacity <= 0.05) {
+					clearInterval(interhellopreloader);
+					hellopreloader.style.display = "none";
+				}
+			}, 16);
+		}
+		window.onload = function() {
+			setTimeout(function() {
+				fadeOutnojquery(hellopreloader);
+			}, 1000);
+		};
+	  var x_click = document.getElementsByTagName('body')[0];
+	  x_click.addEventListener("click", clickout_1);
+
+	  var clickTag = readGETParameter("dspx_clicktag_p"),
+	      dspx_debug = readGETParameter("dspx_debug"),
+	      clickoutLinkRedirect = readGETParameter("dspx_clicktag"),
+	      clickoutLink2 = readGETParameter("dspxct"),
+	      clickoutEncodeLevel = readGETParameter("dspx_encodelevel");
+
+	  function readGETParameter(c) {
+	      var n = window.location.search.substring(1),
+	          i = n.split("&");
+	      for (var e = 0; e < i.length; e++) {
+	          var o = i[e].split("=");
+	          if (o[0] == c) {
+	              return decodeURIComponent(o[1])
+	          }
+	      }
+	      return c == "dspx_encodelevel" ? 2 : 0
+	  }
+
+	  function clickout_1() {
+	      fireASCClicks();
+	      var e = clickTag;
+	      if (clickoutLinkRedirect != 0) {
+	          e = clickoutLinkRedirect + btoa(e)
+	      }
+	      if (clickoutLink2 != 0) {
+	          e = clickoutLink2 + encodeURIComponent(e)
+	      }
+	      if (dspx_debug) console.log(e);
+	      window.open(e)
+	  }
+
+	  function fireASCClicks() {
+	      var _c = "dspx_clicktagASC",
+	          _nn = 5;
+	      var cASC = function (c, nn) {
+	          var n = window.location.search.substring(1),
+	              i = n.split("&");
+	          var aa = [];
+	          for (var e = 0; e < i.length; e++) {
+	              var o = i[e].split("=");
+	              for (var ni = 0; ni < nn; ni++) {
+	                  if (ni == 0) cc = c;
+	                  else cc = c + ni;
+	                  if (o[0] == cc) {
+	                      aa.push(decodeURIComponent(o[1]))
+	                  }
+	              }
+	          }
+	          return aa
+	      };
+	      var ctASC = cASC(_c, _nn);
+	      for (i = 0; i < ctASC.length; i++) {
+	          if (dspx_debug == 1) console.log("fire Click ASC:" + ctASC[i]);
+	          (new Image).src = ctASC[i]
+	      }
+	  }
+	</script>
+</body>
+
+</html>
