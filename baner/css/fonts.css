@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Gibson';
+    src: url('../fonts/GibsonRegular.OTF');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Gibson';
+    src: url('../fonts/GibsonBold.OTF');
+    font-weight: bold;
+}
