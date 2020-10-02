@@ -1,0 +1,363 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  /* Запрет зума текста на телефоне */
+  -webkit-text-size-adjust: 100%;
+  /* Сглаживание шрифтов */
+  -webkit-font-smoothing: antialiased;
+}
+
+body.no-scroll {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+}
+
+body * {
+  margin: 0px;
+  padding: 0px;
+  outline: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-weight: normal;
+  font-style: normal;
+  /* Учёт размеров элементов, включая margin, padding и border */
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* Исправляет баг скроллинга на IOS */
+  -webkit-overflow-scrolling: touch;
+  /* Убирает подсветку элемента при касании на телефоне */
+  -webkit-tap-highlight-color: transparent;
+  /* Убирает базовые стили браузера */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Убирает скругления кнопок на IOS */
+
+input {
+  border-radius: 0;
+}
+
+/* Удаление кнопок, которые браузер вставляет в input */
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+img {
+  border: none;
+  /* Запрет перетаскивания изображений */
+  -webkit-user-drag: none;
+}
+
+.page {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  font-family: 'TT Norms', sans-serif;
+  color: #14171A;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 706px;
+}
+
+/* top slider */
+
+.top-slider {
+  width: 100%;
+  height: 106px;
+  position: relative;
+  margin-bottom: 51px;
+}
+
+.top-slider .slick-list {
+  margin-right: 110px;
+}
+
+.top-slider:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 2px;
+  top: 35px;
+  background-color: #14171A;
+}
+
+.top-slide {
+  margin-right: 140px;
+  width: 72px;
+  cursor: pointer;
+}
+
+.top-slide:hover .top-slide__img img {
+  -webkit-filter: none;
+  filter: none;
+}
+
+.top-slide__img {
+  width: 100%;
+  height: 72px;
+  padding: 8px;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.top-slide__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid #14171A;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.top-slide p {
+  padding-left: 8px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 26px;
+  white-space: nowrap;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.top-slide.slick-active .top-slide__img {
+  padding: 0;
+}
+
+.top-slide.slick-active .top-slide__img img {
+  -webkit-filter: none;
+  filter: none;
+}
+
+.top-slide.slick-active .top-slide__img {
+  margin-bottom: 8px;
+}
+
+.top-slide.slick-active p {
+  padding: 0;
+}
+
+.arrow {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: 56px;
+  height: 56px;
+  border: 2px solid #14171A;
+  font-size: 0;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.arrow-mob {
+  display: none;
+}
+
+.arrow svg {
+  width: 10px;
+  height: 16px;
+}
+
+.arrow svg path {
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#prev,
+#prev-mob {
+  right: 54px;
+  z-index: 2;
+}
+
+#next,
+#next-mob {
+  z-index: 2;
+}
+
+.arrow:hover {
+  border: 2px solid #0054A6;
+}
+
+.arrow:hover svg path {
+  fill: #0054A6;
+}
+
+#prev:hover+#next,
+#prev-mob:hover+#next-mob {
+  border-left: 2px solid #0054A6;
+}
+
+.arrow.slick-disabled {
+  border: 2px solid #E8E8E9;
+  pointer-events: none;
+  z-index: 1 !important;
+}
+
+.arrow.slick-disabled svg path {
+  fill: #E8E8E9;
+}
+
+
+/* bot slider */
+
+
+.bot-slider__container {
+  position: relative;
+}
+
+.bot-slider__number-box {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 14px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #14171A;
+  opacity: 0.4;
+}
+
+.bot-slider__number-box div {
+  font-weight: 500;
+  margin-right: 12px;
+}
+
+.bot-slider__number-box div:last-child {
+  margin-right: 0;
+}
+
+.bot-slider {
+  position: relative;
+}
+
+.bot-slide__img-block {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 56px;
+}
+
+.bot-img-block__img {
+  width: 300px;
+  height: 206px;
+  border: 2px solid #14171A;
+  overflow: hidden;
+}
+
+.bot-img-block__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bot-img-block__description-box {
+  width: 100%;
+  max-width: 380px;
+}
+
+.bot-img-block__description-box h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.bot-img-block__description-box p {
+  font-size: 16px;
+  line-height: 26px;
+  font-feature-settings: 'liga' off;
+}
+
+.bot-slide__text-block {
+  position: relative;
+}
+
+.bot-text-block__header-box {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+.bot-text-block__header-box:after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  width: calc(100% - 238px);
+  height: 1px;
+  background: #E8E8E9;
+}
+
+.bot-text-block__header-box h4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  margin-right: 8px;
+}
+
+.bot-text-block__header-box img {
+  margin-top: 3px;
+  width: 24px;
+  height: 23px;
+}
+
+.bot-slide__text-block p {
+  font-size: 16px;
+  line-height: 26px;
+  font-feature-settings: 'liga' off;
+}
