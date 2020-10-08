@@ -45,7 +45,7 @@ $(document).ready(function() {
     dots: true,
     arrows: false,
     infinite: true,
-    speed: 400,
+    speed: 500,
     slidesToShow: 1
   });
 
@@ -53,7 +53,7 @@ $(document).ready(function() {
     dots: true,
     arrows: true,
     infinite: true,
-    speed: 400,
+    speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4
   });
@@ -62,7 +62,7 @@ $(document).ready(function() {
     dots: true,
     arrows: false,
     infinite: true,
-    speed: 400,
+    speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
     swipe: true,
@@ -77,7 +77,7 @@ $(document).ready(function() {
     dots: false,
     arrows: true,
     infinite: true,
-    speed: 400,
+    speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
     variableWidth: true
