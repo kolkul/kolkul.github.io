@@ -1,0 +1,155 @@
+.h1 {
+  font-family: 'TT Norms', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 85px;
+}
+
+.h2 {
+  font-family: 'TT Norms', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 76px;
+}
+
+.h3 {
+  font-family: 'TT Norms', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 57px;
+}
+
+.h4 {
+  font-family: 'TT Norms', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.h5 {
+  font-family: 'TT Norms', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.h6 {
+  font-family: 'TT Norms', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.big-caps-text {
+  font-family: 'TT Travels', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.small-caps-text {
+  font-family: 'TT Travels', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.paragraph-big {
+  font-family: 'TT Travels', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.paragraph-small {
+  font-family: 'TT Travels', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.button-small {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  padding: 14px 32px;
+  border: 1px solid #232323;
+  box-sizing: border-box;
+  background: none;
+  font-family: 'TT Norms', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #232323;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.button-big {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 16.5px 36px;
+  border: 1px solid #232323;
+  box-sizing: border-box;
+  background: none;
+  font-family: 'TT Norms', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #232323;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.button-small:hover,
+.button-big:hover {
+  border: 1px solid #F39090;
+  background-color: #F39090;
+  color: #fff;
+}
+
+.button-small:focus,
+.button-big:focus {
+  outline: 1px solid #FFFFFF;
+  outline-offset: -2px;
+}
+
+svg path,
+svg stroke {
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
