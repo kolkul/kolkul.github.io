@@ -9,3 +9,9 @@
     src: url('../fonts/Evolventa-Bold.woff');
     font-weight: bold;
 }
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-ExtraBold.woff');
+    font-weight: bold;
+}

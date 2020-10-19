@@ -101,6 +101,8 @@ $('.tab-box .tab').click(function() {
   });
 });
 
+// product -- more btn
+
 var isReviewsAnimate = false;
 
 $('.p-review-more-btn').click(function() {
@@ -133,6 +135,8 @@ $('.p-review-more-btn').click(function() {
   }
 
 });
+
+// product -- img slider
 
 $('.p-small-img-box__img').click(function() {
 
@@ -287,14 +291,6 @@ input.keyup(function() {
 })
 
 
-
-
-
-
-
-
-
-
 // Print only numbers
 
 $('.num').bind("change keyup input click", function() {
@@ -368,4 +364,87 @@ $('.clear-price').click(function () {
 
   $("input#priceMin").change();
   $("input#priceMax").change();
+});
+
+// order tab
+
+$('.o-tabs .o-tab').click(function() {
+
+  var orderIndex = $(this).index();
+  $('.o-tab.active').removeClass('active');
+	$('.o-tab').eq(orderIndex).addClass('active');
+
+	$('.o-item.active').removeClass('active');
+	$('.o-item').eq(orderIndex).addClass('active');
+
+});
+
+
+// order tab map
+
+$('.o-item-shop-choice__btns .o-item__tab-map').click(function() {
+
+  var indexMap = $(this).index();
+  $('.o-item__tab-map.active').removeClass('active');
+	$('.o-item__tab-map').eq(indexMap).addClass('active');
+
+	$('.o-item__map.active').removeClass('active');
+	$('.o-item__map').eq(indexMap).addClass('active');
+
+});
+
+
+// number oreder
+
+$(document).ready(function(){
+
+  var a = $('.counter input').val();
+  if (a == '') {
+    $('.counter input').val('1');
+  }
+
+  $('.counter input').blur();
+  counter_block();
+
+});
+
+
+$('.minus').click(function() {
+  var value_number = Number($(this).siblings('input').val(), 10);
+  $(this).siblings('input').val( function(){
+    if (value_number > 1) {
+      return value_number - 1
+    } else {
+      return value_number;
+    }
+  });
+  $('.counter input').blur();
+});
+
+
+$('.plus').click(function() {
+  var value_number = Number($(this).siblings('input').val(), 10);
+  $(this).siblings('input').val( function(){
+    return value_number + 1
+  });
+  $('.counter input').blur()
+});
+
+
+$('.counter input').blur(function() {
+  var a = $(this).val();
+
+  for (var i=0; i<10; i++) {
+    var a = $(this).val();
+    var b = a[0]
+    if (b == 0) {
+      var withOutZero = a.slice(1);
+      $(this).val(withOutZero);
+    } else {
+      break;
+    }
+  };
+  if (a == '') {
+    $(this).val('1');
+  }
 });
