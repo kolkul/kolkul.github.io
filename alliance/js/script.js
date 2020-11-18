@@ -91,7 +91,12 @@ function calculatingValue() {
 }
 
 $(document).ready(function() {
-  calculatingValue()
+  calculatingValue();
+  changeChooseCountry();
+  zoomMap('up');
+  if (window.innerWidth > 1200) {
+    changeMapModal();
+  }
 });
 
 
@@ -109,10 +114,10 @@ $('.country_flag_name ').click(function() {
     });
   } else {
     $(this).closest('.country_box_row').find('.hidden_block').addClass('top');
-   $(this).closest('.country_box_row').find('.hidden_block').fadeIn(500, function() {
-    $(this).addClass('active');
-  });
- }
+    $(this).closest('.country_box_row').find('.hidden_block').fadeIn(500, function() {
+      $(this).addClass('active');
+    });
+  }
 });
 
 $('.country_list').scroll(function() {
@@ -121,6 +126,156 @@ $('.country_list').scroll(function() {
     $(this).removeClass('top');
   });
 });
+
+
+$('.map_tab_option').click(function() {
+  $('.map_tab_option').removeClass('active');
+  $(this).addClass('active');
+  changeChooseCountry();
+});
+
+
+$('.country').click(function() {
+  $('.country.active').removeAttr('style');
+  $('.country.active').removeClass('active');
+  var blockColor = $(this).find('.country_point').find('.color').css('background-color');
+  $(this).addClass('active');
+  changeMapModal()
+  if ($(window).innerWidth() > 1280) {
+    $(this).css({'background': blockColor, 'border-color' : blockColor});
+    $('.modal_answer_map').find('.country_rating span').css({'color': blockColor});
+  }
+});
+
+function changeChooseCountry() {
+  $('.map_svg path').css({'fill': '#D5DFFF'})
+  var tabOption = $('.map_tab_option.active').attr('data-rating');
+  var tabOptionColor = $('.map_tab_option.active').attr('data-color');
+  $('.map_svg path').each(function() {
+    var countryOption = $(this).attr('data-rating');
+    if (countryOption == tabOption) {
+     $(this).css({'fill': tabOptionColor});
+   }
+ });
+}
+
+let modalcoord = {
+  'china' :[231,552],
+  'usa' :[235,141],
+  'great_breatan' :[280,337],
+  'canada' :[291,124],
+  'germany' :[267,363],
+  'korea_republic' :[230,624],
+  'france' :[254,350],
+  'japan' :[231,600],
+  'india' :[200,500],
+  'russia' :[300,500],
+  'australia' :[105,614],
+  'denmark' :[281,363],
+  'israel' :[225,415],
+  'spain' :[239,334],
+  'italy' :[250,364],
+  'netherland' :[270,354],
+  'singapoor' :[161,548],
+  'austria' :[258,373],
+  'belgium' :[268,353],
+  'brazil' :[135,243],
+  'norway' :[306,369],
+  'polish' :[270,382],
+  'portugalian' :[239,327],
+  'finland' :[302,396],
+  'switzerland' :[302,376],
+  'sweden' :[256,360],
+  'argentin' :[93,211],
+  'bangladesh' :[202,524],
+  'vietnam' :[194,554],
+  'greece' :[240,389],
+  'egypt' :[210,401],
+  'indonesia' :[154,570],
+  'iran' :[220,455],
+  'iraq' :[224,430],
+  'ireland' :[272,326],
+  'colombia' :[161,191],
+  'malaysia' :[157,569],
+  'mexico' :[200,135],
+  'uae' :[202,451],
+  'romania' :[252,393],
+  'saudi' :[206,429],
+  'thailand' :[196,535],
+  'turkish' :[235,415],
+  'philipines' :[175,591],
+  'czech' :[264,373],
+  'chili' :[103,202],
+  'south_africa' :[94,393],
+  'nigeria' :[171,360],
+  'pakistan' :[218,487],
+  'peru' :[132,188],
+}
+
+function changeMapModal() {
+  var listAttr = $('.country.active').attr('data-country').toLowerCase();
+  $('.map_svg path').each(function() {
+    var mapAttr = $(this).attr('data-country');
+    if (mapAttr == undefined) {
+      return;
+    }
+    if (listAttr == mapAttr.toLowerCase()) {
+    }
+  });
+  $('.modal_answer_map').fadeOut(500, function() {
+    $(this).css({'bottom': modalcoord[listAttr][0], 'left': modalcoord[listAttr][1] });
+    var countryName = $('.country.active').find('.country_name p').text();
+    var countryRate = $('.country.active').find('.country_point p').text();
+    $('.modal_answer_map').find('.country_name').text(countryName);
+    $('.modal_answer_map').find('.country_rating span').text(countryRate);
+  });
+  $('.modal_answer_map').fadeIn(500);
+}
+
+var currentStep = 50;
+var modalCorrectCurrent = 0;
+var modalHeightCurrent = 0;
+function zoomMap(direction) {
+  var step = 5;
+  var modalCorrect = step * 7.34;
+  var modalHeightCorrect = modalCorrect / 1.97;
+  var zoomDirection = direction;
+  var mapProcent = 1468 / 100;
+  if (zoomDirection == 'up') {
+    if (currentStep == 100) {
+      return;
+    } else {
+      currentStep += step;
+      $.each(modalcoord, function( key, value ) {
+        value[1] += modalCorrect;
+        value[0] += modalHeightCorrect;
+      });
+    }
+  } else {
+    if (currentStep == 50) {
+      return;
+    } else {
+      currentStep -= step;
+      $.each(modalcoord, function( key, value ) {
+        value[1] -= modalCorrect;
+        value[0] -= modalHeightCorrect;
+      });
+    }
+  }
+  var mapWidthCurrent = currentStep * mapProcent;
+  $('.map').width(mapWidthCurrent + 'px');
+  changeMapModal();
+}
+
+
+$('.plus').click(function() {
+  zoomMap('up');
+})
+
+$('.minus').click(function() {
+  zoomMap('down');
+})
+
 
 $('.experts-slider').slick({
   infinite: false,
