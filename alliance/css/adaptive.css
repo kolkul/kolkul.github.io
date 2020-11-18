@@ -419,7 +419,7 @@
   padding-top: 5px;
 }
 
-.hidden_block {
+.country_box_row .hidden_block {
   width: 100%;
   z-index: 1;
   position: absolute;
@@ -434,7 +434,7 @@
   padding: 16px 0px;
 }
 
-.hidden_block.top {
+.country_box_row .hidden_block.top {
   top: 0px;
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
@@ -443,7 +443,7 @@
   transform: translateY(-100%);
 }
 
-.hidden_block.top .rectangle {
+.country_box_row .hidden_block.top .rectangle {
  -webkit-transform: rotate(45deg) translateY(50%);
  -moz-transform: rotate(45deg) translateY(50%);
  -ms-transform: rotate(45deg) translateY(50%);
@@ -1207,9 +1207,6 @@
   height: 0;
 }
 
-.modal_answer_map {
-  display: none !important;
-}
 
 
 }
