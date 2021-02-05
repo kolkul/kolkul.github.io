@@ -41,6 +41,21 @@ function blockBody() {
 
 }
 
+// header anchor
+
+$(document).ready(function () {
+	$('.header__nav').on("click", "a", function (event) {
+		event.preventDefault();
+
+		var id = $(this).attr('href');
+		var top = $(id).offset().top - 40;
+
+		$('body,html').animate({
+			scrollTop: top
+		}, 1500);
+	});
+});
+
 
 // validation
 
@@ -92,7 +107,7 @@ $('.open-pop-up-thanks').on('click', function () {
 });
 
 $('.open-pop-up-question').on('click', function () {
-	$('.pop-up-thanks').addClass('active');
+	$('.pop-up-container-question').addClass('active');
 	blockBody();
 });
 
@@ -118,7 +133,7 @@ $('.pop-up-wrapper').click(function (e) {
 $('.open-video').on('click', function () {
 	blockBody();
 	$('.pop-up-video').addClass('active');
-	$('#video')[0].src += "&autoplay=1";
+	$('#video')[0].src += "&autoplay=1&playsinline=1";
 });
 
 
@@ -127,8 +142,8 @@ $('.close-pop-up').on('click', function () {
 	blockBody();
 })
 
-$(document).on('click', '.close-pop-up', function() {
-	jQuery("iframe").each(function() {
+$(document).on('click', '.close-pop-up', function () {
+	jQuery("iframe").each(function () {
 		jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
 	});
 });
@@ -148,3 +163,129 @@ $('.approach-box__more-btn').on('click', function () {
 	$(this).slideToggle(400);
 });
 
+
+// questions section -- accordion
+
+var openAnswerAnimation = false;
+
+$('.questions-box__question').on('click', function () {
+
+	if (!openAnswerAnimation) {
+		var getQuestionContainer = $(this).closest('.questions-section__box');
+
+		getQuestionContainer.toggleClass('active');
+		getQuestionContainer.find('.questions-box__answer').slideToggle(500);
+
+		openAnswerAnimation = true;
+
+		setTimeout(function () {
+			openAnswerAnimation = false;
+		}, 700)
+	}
+
+});
+
+
+// button "more questions"
+
+if (!$('.questions-block__hidden-questions').length) {
+	$('.open-more-questions').remove();
+}
+
+$('.open-more-questions').on('click', function () {
+	$('.questions-block__hidden-questions').slideDown(700);
+	$(this).slideUp(400);
+});
+
+
+// slider
+
+$('.slider').slick({
+	infinite: true,
+	arrows: true,
+	dots: true,
+	autoplay: true,
+	autoplaySpeed: 4500,
+	variableWidth: true,
+	pauseOnFocus: false,
+	pauseOnHover: false,
+	pauseOnDotsHover: false,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	cssEase: 'ease',
+	speed: 700,
+	draggable: true,
+	edgeFriction: 15,
+	touchThreshold: 125,
+	swipeToSlide: true,
+	prevArrow: $('.prev-arrow'),
+	nextArrow: $('.next-arrow'),
+	appendDots: $('.slider__dots-box'),
+	customPaging: function (slider, i) {
+		var thumb = $(slider.$slides[i]).data('thumb');
+		return '<div class="slider__dot">\n' +
+			'\t\t\t\t\t<div class="dot__user"><img src="img/user-1.png" alt="">\n' +
+			'\t\t\t\t\t\t<div class="dot__circle">\n' +
+			'\t\t\t\t\t\t\t<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+			'\t\t\t\t\t\t\t\t<circle cx="40" cy="40" r="38" stroke="url(#paint0_linear)" stroke-width="4" stroke-dasharray="0, 239"/>\n' +
+			'\t\t\t\t\t\t\t\t<defs>\n' +
+			'\t\t\t\t\t\t\t\t\t<linearGradient id="paint0_linear" x1="40" y1="0" x2="40" y2="80" gradientUnits="userSpaceOnUse">\n' +
+			'\t\t\t\t\t\t\t\t\t\t<stop stop-color="#D8261E"/>\n' +
+			'\t\t\t\t\t\t\t\t\t\t<stop offset="1" stop-color="#FF4D00"/>\n' +
+			'\t\t\t\t\t\t\t\t\t</linearGradient>\n' +
+			'\t\t\t\t\t\t\t\t</defs>\n' +
+			'\t\t\t\t\t\t\t</svg>\n' +
+			'\t\t\t\t\t\t</div>\n' +
+			'\t\t\t\t\t</div>\n' +
+			'\t\t\t\t</div>';
+	},
+	responsive: [
+		{
+			breakpoint: 750,
+			settings: {
+				arrows: false
+			}
+		}
+	]
+});
+
+
+// back to top btn
+
+$('.btn-to-top').on('click', function (e) {
+
+	e.preventDefault();
+
+	$('html, body').animate({
+		scrollTop: '0px'
+	}, 1500);
+
+});
+
+
+// scroll animation
+
+function animation(scrollTop) {
+
+	$('.animation').not('.animated').each(function() {
+
+		var offsetTop = $(this).offset().top;
+		var windowHeight = window.innerHeight;
+
+		if ((scrollTop + windowHeight) > offsetTop) {
+			$(this).addClass('animated');
+		}
+	});
+
+}
+
+$(window).scroll(function() {
+	var scrollTop = $(this).scrollTop();
+
+	// Анимации подплываний
+	animation(scrollTop);
+});
+
+$(window).on('load', function() {
+	$(window).scroll();
+});
