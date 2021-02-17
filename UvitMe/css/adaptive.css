@@ -19,20 +19,6 @@
     max-width: 530px;
   }
 
-  .info-form__text-block {
-    max-width: 550px;
-  }
-
-  .info-form__img {
-    max-width: 560px;
-  }
-
-/*  form section */
-
-  .form-section__img {
-    max-width: 560px;
-  }
-
 }
 
 
@@ -510,6 +496,11 @@
   .main-section .container {
     align-items: stretch;
     justify-content: center;
+  }
+
+  .main-section__header-block {
+    display: flex;
+    flex-direction: column;
   }
 
   .change-words, .word-end {

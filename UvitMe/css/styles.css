@@ -727,9 +727,6 @@ section.main-section:after {
 .word-end {
   margin-bottom: -29px;
   z-index: auto;
-
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
 }
 
 .word-end span {
@@ -1906,9 +1903,9 @@ svg path {
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
   opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
 
 .dot__circle svg {
@@ -2323,7 +2320,7 @@ svg path {
   text-align: center;
 }
 
-.pop-up-content .main-section__header .word-end {
+.pop-up-content .word-end {
   text-align: left;
 }
 
