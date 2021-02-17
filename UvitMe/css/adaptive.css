@@ -19,6 +19,20 @@
     max-width: 530px;
   }
 
+  .info-form__text-block {
+    max-width: 550px;
+  }
+
+  .info-form__img {
+    max-width: 560px;
+  }
+
+/*  form section */
+
+  .form-section__img {
+    max-width: 560px;
+  }
+
 }
 
 
@@ -63,12 +77,16 @@
     margin-right: 0;
   }
 
+
   /* main section	*/
   section.main-section {
     padding-top: 100px;
     padding-bottom: 60px;
     min-height: auto;
     overflow: hidden;
+
+    -webkit-border-radius: 0 0 40px 40px;
+    border-radius: 0 0 40px 40px;
   }
 
   section.main-section:after {
@@ -110,6 +128,13 @@
   .circular {
     width: 95px;
     height: 95px;
+  }
+
+  .main-section__img-block,
+  .main-section__img-box,
+  .main-section__img-box video {
+    -webkit-border-radius: 0 0 40px 40px;
+    border-radius: 0 0 40px 40px;
   }
 
   /* control section	*/
@@ -395,6 +420,11 @@
     width: 100%;
   }
 
+  .form-section__img picture {
+    width: 100%;
+    max-width: none;
+  }
+
 
   /* footer */
   .footer__top-block {
@@ -431,7 +461,7 @@
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 750px) and (orientation: portrait) {
   /* ui kit */
   .h1 {
     font-size: 25px;
@@ -474,18 +504,12 @@
     display: flex;
     padding-bottom: 30px;
     min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
   }
 
   .main-section .container {
     align-items: stretch;
     justify-content: center;
-  }
-
-  .main-section__header-block {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    width: 100%;
   }
 
   .change-words, .word-end {
@@ -521,8 +545,15 @@
   }
 
   .main-img-block__text-box .main-img-block__img {
-    width: 22px;
-    height: 22px;
+    width: 15px;
+    height: auto;
+  }
+
+  .main-section__img-block,
+  .main-section__img-box,
+  .main-section__img-box video {
+    -webkit-border-radius: 0 0 40px 40px;
+    border-radius: 0 0 40px 40px;
   }
 
   /* control section	*/
@@ -821,6 +852,11 @@
     padding-left: 30px;
   }
 
+  .video-section__text-block .h2 img {
+    width: 15px;
+    height: auto;
+  }
+
   .video-section__video-block {
     max-height: 260px;
     margin-bottom: 30px;
@@ -870,6 +906,10 @@
 
   .pop-up-video .pop-up-content {
     height: 300px;
+  }
+
+  .pop-up-video .pop-up-content video, .pop-up-video .pop-up-content iframe {
+    object-fit: none;
   }
 
 
@@ -980,8 +1020,8 @@
   }
 
   .slider__dots-number {
-    -webkit-transform: translateX(170px);
-    transform: translateX(170px);
+    -webkit-transform: translateX(180px);
+    transform: translateX(180px);
   }
 
   .slider__btns {

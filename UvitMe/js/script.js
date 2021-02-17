@@ -65,10 +65,10 @@ $(window).on('load', function () {
     }).get()));
     $(this).find('.change-words').attr('style', 'width: ' + maxWordsBoxWidth + 'px;');
 
-    var maxLettersBoxWidth = Math.ceil(Math.max.apply(Math, $(this).find('.word-end span').map(function () {
-      return $(this).width();
-    }).get()));
-    $(this).find('.word-end').attr('style', 'width: ' + maxLettersBoxWidth + 'px;');
+    // var maxLettersBoxWidth = Math.ceil(Math.max.apply(Math, $(this).find('.word-end span').map(function () {
+    //   return $(this).width();
+    // }).get()));
+    // $(this).find('.word-end').attr('style', 'width: ' + maxLettersBoxWidth + 'px;');
 
     setInterval(() => {
 
@@ -448,6 +448,12 @@ if ($(window).width() < 750) {
 } else {
   mainVideo.append("<source type='video/mp4' src='" + highQualVersionSrc + "' />");
 }
+
+
+// ios viewport
+
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
 $(window).scroll(function () {
