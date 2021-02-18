@@ -61,8 +61,8 @@ $(window).scroll(function () {
 
   if ($('body').hasClass('no-scroll')) {
     $('body,html').animate({
-      scrollTop: documentScrollStop - 500
-    }, 300);
+      scrollTop: documentScrollStop
+    }, 700);
   }
 });
 
