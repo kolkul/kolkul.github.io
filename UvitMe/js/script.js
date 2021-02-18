@@ -16,17 +16,7 @@ $('.num').bind("change keyup input click", function () {
 
 // Блокировка скроллинга Body
 
-function preventDefault(e){
-  e.preventDefault();
-}
-
-function disableScroll(){
-  document.body.addEventListener('touchmove', preventDefault, { passive: false });
-}
-function enableScroll(){
-  document.body.removeEventListener('touchmove', preventDefault, { passive: false });
-}
-
+var documentScrollStop;
 
 function blockBody() {
   if ($('body').hasClass('no-scroll')) {
@@ -37,8 +27,6 @@ function blockBody() {
     $('body').css('overflow', 'auto');
 
 
-    enableScroll();
-
 
     // $('html').attr('style', '');
 
@@ -46,25 +34,23 @@ function blockBody() {
 
   } else {
 
-    // let scrollTop = $(document).scrollTop();
+    documentScrollStop = $(document).scrollTop();
 
-    $('body').css('overflow', 'hidden');
+    // $('body').css('overflow', 'hidden');
     $('body').addClass('no-scroll');
 
     // $('html').attr('data-scroll', scrollTop);
-    //
+
     // $('html').css({
     //   top: '-' + scrollTop + 'px'
     // });
-
-    disableScroll();
 
   }
 }
 
 // header hide
 
-$(window).scroll(function (event) {
+$(window).scroll(function () {
   var scroll = $(this).scrollTop();
 
   if (scroll > 0) {
@@ -73,10 +59,9 @@ $(window).scroll(function (event) {
     $('.header').removeClass('fill');
   }
 
-  if ($('html').hasClass('no-scroll')) {
-    event.window.ontouchmove = function(e) {
-      e.preventDefault();
-    }
+  if ($('body').hasClass('no-scroll')) {
+    // console.log(documentScrollStop);
+    $(this).scrollTop(documentScrollStop - 5);
   }
 });
 
