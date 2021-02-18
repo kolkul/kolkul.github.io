@@ -47,6 +47,10 @@ function blockBody() {
   }
 }
 
+$('body.no-scroll').on('touchmove', function (e) {
+  e.preventDefault();
+}, false)
+
 // header hide
 
 $(window).scroll(function () {
@@ -60,9 +64,6 @@ $(window).scroll(function () {
 
   if ($('body').hasClass('no-scroll')) {
     // console.log(documentScrollStop);
-    $('body').on('touchmove', function (e) {
-      e.preventDefault();
-    })
 
     // $('body,html').animate({
     //   scrollTop: documentScrollStop - 150
