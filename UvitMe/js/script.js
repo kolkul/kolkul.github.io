@@ -57,6 +57,13 @@ $(window).scroll(function () {
 
 // main block header animation
 
+function changeLettersWidth(ths) {
+  var activeLetters = $(ths).find('.word-end span.active');
+  var widthActiveLetters = activeLetters.width();
+
+  $(ths).find('.word-end').css('width', widthActiveLetters)
+}
+
 $(window).on('load', function () {
   $('.main-section__header').each(function () {
 
@@ -65,10 +72,7 @@ $(window).on('load', function () {
     }).get()));
     $(this).find('.change-words').attr('style', 'width: ' + maxWordsBoxWidth + 'px;');
 
-    // var maxLettersBoxWidth = Math.ceil(Math.max.apply(Math, $(this).find('.word-end span').map(function () {
-    //   return $(this).width();
-    // }).get()));
-    // $(this).find('.word-end').attr('style', 'width: ' + maxLettersBoxWidth + 'px;');
+    changeLettersWidth(this);
 
     setInterval(() => {
 
@@ -88,15 +92,19 @@ $(window).on('load', function () {
 
       var getActiveElAttr = $(this).find('.change-words span.active').attr('data-letter');
 
-      if (getActiveElAttr == 'u') {
+      if (getActiveElAttr == 'm') {
 
-        $(this).find('.word-end span').removeClass('active')
-        $(this).find('.word-end span.u').addClass('active')
+        $(this).find('.word-end .active').removeClass('active');
+        $(this).find('.word-end span.m').addClass('active');
 
-      } else if (getActiveElAttr == 'e') {
+        changeLettersWidth(this);
 
-        $(this).find('.word-end span').removeClass('active')
-        $(this).find('.word-end span.e').addClass('active')
+      } else if (getActiveElAttr == 'f') {
+
+        $(this).find('.word-end .active').removeClass('active');
+        $(this).find('.word-end span.f').addClass('active');
+
+        changeLettersWidth(this);
 
       }
 
@@ -157,9 +165,23 @@ $('.input-box textarea').on('input', function () {
 
 // scroll for modal
 
+var scrollWidth;
+
+function getScrollBarWidth() {
+  let $divs = $('<div class="div1" style="width: 100vw; overflow-y: scroll;"><div class="div2" style="width: 100%;"></div></div>');
+  $('body').append($divs);
+  let width1 = $('.div1').width(),
+    width2 = $('.div2').width();
+  scrollWidth = width1 - width2;
+  $divs.remove();
+}
+
+getScrollBarWidth();
+
 function bodyScroll(popup) {
   if (popup.find('.pop-up').outerHeight(true) > $(window).height()) {
-    $('body').addClass('padding');
+    $('body').css('padding-right', scrollWidth + 'px');
+    $('.header').css('right', scrollWidth + 'px');
   } else {
     $('body').addClass('scroll');
   }
@@ -168,10 +190,28 @@ function bodyScroll(popup) {
 
 // pop-up
 
+
+function getBodyScrollTop() {
+  return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop);
+}
+
+function scrollYBody() {
+  body.dataset.scrollY = getBodyScrollTop()
+  body.style.top = `-${body.dataset.scrollY}px`
+}
+
+
+function scrollBlockForPC() {
+  // if ($(window).width() > 1250) {
+    blockBody();
+  // }
+}
+
 $('.open-pop-up').on('click', function () {
-  bodyScroll($('.pop-up-container'));
   $('.pop-up-container').addClass('active');
-  blockBody();
+  bodyScroll($('.pop-up-container'));
+  scrollBlockForPC();
+  scrollYBody();
 });
 
 $('.open-pop-up-thanks').on('click', function () {
@@ -187,17 +227,19 @@ $('.open-pop-up-thanks').on('click', function () {
   } else {
 
     $('.pop-up-thanks').addClass('active');
-    blockBody();
+    scrollBlockForPC();
 
   }
 
   bodyScroll($('.pop-up-thanks'));
+  scrollYBody();
 });
 
 $('.open-pop-up-question').on('click', function () {
-  bodyScroll($('.pop-up-container-question'));
   $('.pop-up-container-question').addClass('active');
-  blockBody();
+  bodyScroll($('.pop-up-container-question'));
+  scrollBlockForPC();
+  scrollYBody();
 });
 
 $('.pop-up-wrapper').on('click', function (e) {
@@ -208,8 +250,11 @@ $('.pop-up-wrapper').on('click', function (e) {
 
 $('.close-pop-up').on('click', function () {
   $(this).closest('.pop-up-wrapper').removeClass('active');
-  $('body').removeClass('scroll padding');
-  blockBody();
+  $('body').removeClass('scroll');
+  $('body').css('padding-right', 0 + 'px');
+  $('.header').css('right', 0 + 'px');
+  scrollBlockForPC();
+  window.scrollTo(0, body.dataset.scrollY)
 
   if ($(this).closest('.pop-up-video').length) {
     $(this).closest('.pop-up-video').find('#video').get(0).pause();
@@ -221,7 +266,7 @@ $('.close-pop-up').on('click', function () {
 
 $('.open-video').on('click', function () {
 
-  blockBody();
+  scrollBlockForPC();
   bodyScroll($('.pop-up-video'));
 
   $('.pop-up-video').addClass('active');
