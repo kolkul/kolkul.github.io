@@ -26,7 +26,13 @@ function blockBody() {
     $('body').removeClass('no-scroll');
     $('html').css('overflow', 'auto');
 
-    document.removeEventListener('scroll', prevent);
+    document.onmousewheel=document.onwheel=function(){
+      return true;
+    };
+    document.addEventListener("MozMousePixelScroll",function(){return true},true);
+    document.onkeydown=function(e) {
+      if (e.keyCode>=33&&e.keyCode<=40) return true;
+    }
 
     // $('html').attr('style', '');
 
@@ -39,7 +45,13 @@ function blockBody() {
     $('body').addClass('no-scroll');
     $('html').css('overflow', 'hidden');
 
-    document.addEventListener('scroll', prevent, {passive: false});
+    document.onmousewheel=document.onwheel=function(){
+      return false;
+    };
+    document.addEventListener("MozMousePixelScroll",function(){return false},false);
+    document.onkeydown=function(e) {
+      if (e.keyCode>=33&&e.keyCode<=40) return false;
+    }
 
     // $('html').attr('data-scroll', scrollTop);
 
