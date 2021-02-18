@@ -52,7 +52,7 @@ $(window).scroll(function (event) {
   }
 
   if ($('html').hasClass('no-scroll')) {
-    event.document.ontouchmove = function(e) {
+    event.window.ontouchmove = function(e) {
       e.preventDefault();
     }
   }
