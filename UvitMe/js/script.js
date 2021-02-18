@@ -17,28 +17,22 @@ $('.num').bind("change keyup input click", function () {
 // Блокировка скроллинга Body
 
 function blockBody() {
-
   if ($('body').hasClass('no-scroll')) {
-
     let scrollTop = $('body').attr('data-scroll');
     $(document).scrollTop(scrollTop);
 
+
     $('body').removeClass('no-scroll');
     $('body').attr('style', '');
-
   } else {
-
     let scrollTop = $(document).scrollTop();
     $('body').css({
       top: '-' + scrollTop + 'px'
     });
 
     $('body').addClass('no-scroll');
-
     $('body').attr('data-scroll', scrollTop);
-
   }
-
 }
 
 
@@ -240,7 +234,6 @@ $('.close-pop-up').on('click', function () {
     $(this).closest('.pop-up-video').find('#video').get(0).pause();
   }
 })
-
 
 // video pop-up
 
