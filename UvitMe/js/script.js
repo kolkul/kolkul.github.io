@@ -26,11 +26,13 @@ function blockBody() {
     $(document).scrollTop(scrollTop);
   } else {
     let scrollTop = $(document).scrollTop();
-    $('body').css({
-      top: '-' + scrollTop + 70 + 'px'
-    });
 
     $('body').addClass('no-scroll');
+    
+     $('body').css({
+      top: '-' + scrollTop + 'px'
+    });
+    
     $('body').attr('data-scroll', scrollTop);
   }
 }
