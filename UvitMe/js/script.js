@@ -24,7 +24,7 @@ function blockBody() {
     // let scrollTop = $('html').attr('data-scroll');
 
     $('body').removeClass('no-scroll');
-
+    $('html').css('overflow', 'auto');
 
     // $('html').attr('style', '');
 
@@ -35,6 +35,7 @@ function blockBody() {
     documentScrollStop = $(document).scrollTop();
 
     $('body').addClass('no-scroll');
+    $('html').css('overflow', 'hidden');
 
     // $('html').attr('data-scroll', scrollTop);
 
