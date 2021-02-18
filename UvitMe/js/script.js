@@ -61,7 +61,7 @@ function blockBody() {
     $('body').css('overflow', 'auto');
 
 
-    enableScrolling();
+    enableScroll();
 
 
     // $('html').attr('style', '');
@@ -81,7 +81,7 @@ function blockBody() {
     //   top: '-' + scrollTop + 'px'
     // });
 
-    disableScrolling();
+    disableScroll();
 
   }
 }
