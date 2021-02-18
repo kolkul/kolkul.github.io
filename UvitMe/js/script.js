@@ -60,11 +60,8 @@ $(window).scroll(function () {
   }
 
   if ($('body').hasClass('no-scroll')) {
-    window.alert();
-    window.alert = function(){return false;};
-
     $('body,html').animate({
-      swipeUp: documentScrollStop - 150
+      scrollTop: documentScrollStop - 500
     }, 300);
   }
 });
