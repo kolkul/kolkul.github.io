@@ -25,13 +25,20 @@ function blockBody() {
 
     $('body').removeClass('no-scroll');
 
+    $('body,html').css('pointer-events', 'auto');
+
     // $('html').attr('style', '');
 
     // $(document).scrollTop(scrollTop);
 
   } else {
 
+    documentScrollStop = $(document).scrollTop();
+
     $('body').addClass('no-scroll');
+
+    $('body,html').css('pointer-events', 'none');
+
 
     // $('html').attr('data-scroll', scrollTop);
 
