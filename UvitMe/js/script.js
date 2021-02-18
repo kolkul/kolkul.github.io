@@ -60,12 +60,12 @@ $(window).scroll(function () {
     $('.header').removeClass('fill');
   }
 
-  // if ($('body').hasClass('no-scroll')) {
-  //   // console.log(documentScrollStop);
-  //   $('body,html').animate({
-  //     scrollTop: documentScrollStop - 150
-  //   }, 300);
-  // }
+  if ($('body').hasClass('no-scroll')) {
+    // console.log(documentScrollStop);
+    $('body,html').animate({
+      scrollTop: documentScrollStop - 150
+    }, 300);
+  }
 });
 
 
