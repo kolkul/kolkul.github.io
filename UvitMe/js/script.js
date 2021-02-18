@@ -47,9 +47,9 @@ function blockBody() {
   }
 }
 
-$('body.no-scroll').on('touchmove', function (e) {
-  e.preventDefault();
-}, false)
+$('body.no-scroll').on('touchmove', function () {
+  alert('touchmove');
+})
 
 // header hide
 
@@ -63,11 +63,11 @@ $(window).scroll(function () {
   }
 
   if ($('body').hasClass('no-scroll')) {
-    // console.log(documentScrollStop);
+    alert('scroll');
 
-    // $('body,html').animate({
-    //   scrollTop: documentScrollStop - 150
-    // }, 300);
+    $('body,html').animate({
+      swipeUp: documentScrollStop - 150
+    }, 300);
   }
 });
 
