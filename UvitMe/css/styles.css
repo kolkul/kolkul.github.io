@@ -27,6 +27,8 @@ html.no-scroll body {
   overflow: hidden;
   height: 100%;
 
+  pointer-events: none;
+
   touch-action: none;
   -ms-touch-action: none;
 }
