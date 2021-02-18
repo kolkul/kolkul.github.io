@@ -17,25 +17,25 @@ $('.num').bind("change keyup input click", function () {
 // Блокировка скроллинга Body
 
 function blockBody() {
-  if ($('html').hasClass('no-scroll')) {
+  if ($('body').hasClass('no-scroll')) {
 
-    let scrollTop = $('body').attr('data-scroll');
+    // let scrollTop = $('body').attr('data-scroll');
 
-    $('html').removeClass('no-scroll');
-    $('.page').attr('style', '');
+    $('body').removeClass('no-scroll');
+    // $('body').attr('style', '');
 
-    $(document).scrollTop(scrollTop);
+    // $(document).scrollTop(scrollTop);
 
   } else {
 
-    let scrollTop = $(document).scrollTop();
+    // let scrollTop = $(document).scrollTop();
 
-    $('html').addClass('no-scroll');
-    $('body').attr('data-scroll', scrollTop);
+    $('body').addClass('no-scroll');
+    // $('body').attr('data-scroll', scrollTop);
 
-    $('.page').css({
-      top: '-' + scrollTop + 'px'
-    });
+    // $('body').css({
+    //   top: '-' + scrollTop + 'px'
+    // });
 
   }
 }
