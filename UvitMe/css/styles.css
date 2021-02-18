@@ -15,6 +15,17 @@ html {
   position: relative;
 }
 
+html.no-scroll,
+html.no-scroll body {
+  overflow: hidden;
+  position: fixed;
+
+  touch-action: none;
+  -ms-touch-action: none;
+
+  -webkit-overflow-scrolling: auto!important;
+}
+
 
 body {
   margin: 0px;
@@ -23,27 +34,21 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body.no-scroll {
-  position:relative;
-  /*top: 0;*/
-  /*left: 0;*/
-  /*right: 0;*/
-  /*position: absolute;*/
-  overflow: hidden;
-  height: 100vh;
+/*body.no-scroll {*/
+/*  pointer-events: none;*/
+/*  position: fixed;*/
+/*  !*top: 0;*!*/
+/*  !*left: 0;*!*/
+/*  !*right: 0;*!*/
+/*  !*position: absolute;*!*/
+/*  overflow: hidden;*/
+/*  height: 100vh;*/
 
-  touch-action: none;
-  -ms-touch-action: none;
 
-  -webkit-overflow-scrolling: auto!important;
-}
+/*}*/
 
-body.no-scroll .page {
+html.no-scroll .page {
   position: relative;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  /*height: 100%;*/
   overflow: hidden;
   touch-action: none;
   -ms-touch-action: none;
@@ -107,7 +112,7 @@ img {
 }
 
 .page {
-  position: static;
+  position: relative;
   width: 100%;
 }
 
