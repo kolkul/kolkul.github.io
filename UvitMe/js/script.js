@@ -22,7 +22,7 @@ function blockBody() {
     // let scrollTop = $('body').attr('data-scroll');
 
     $('body').removeClass('no-scroll');
-    $('body').attr('style', '');
+    // $('body').attr('style', '');
 
     // $(document).scrollTop(scrollTop);
 
@@ -31,7 +31,7 @@ function blockBody() {
     // let scrollTop = $(document).scrollTop();
 
     $('body').addClass('no-scroll');
-    $('body').attr('data-scroll', scrollTop);
+    // $('body').attr('data-scroll', scrollTop);
 
     // $('body').css({
     //   top: '-' + scrollTop + 'px'
