@@ -25,7 +25,6 @@ function blockBody() {
 
     $('body').removeClass('no-scroll');
     $('body').css('overflow', 'auto');
-    $("body").unbind("touchmove");
 
 
     // $('html').attr('style', '');
@@ -38,7 +37,6 @@ function blockBody() {
 
     $('body').css('overflow', 'hidden');
     $('body').addClass('no-scroll');
-    $("body").on("touchmove", false);
 
     // $('html').attr('data-scroll', scrollTop);
 
