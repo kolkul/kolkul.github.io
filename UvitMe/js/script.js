@@ -62,7 +62,7 @@ $(window).scroll(function () {
   if ($('body').hasClass('no-scroll')) {
     // console.log(documentScrollStop);
     $('body,html').animate({
-      scrollTop: documentScrollStop - 15
+      scrollTop: documentScrollStop - 150
     }, 300);
   }
 });
