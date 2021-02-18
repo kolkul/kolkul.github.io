@@ -23,7 +23,7 @@ body.no-scroll {
   left: 0;
   right: 0;
   bottom: 0;
-  position: fixed;
+  position: absolute;
   overflow: hidden;
 
   -webkit-transition: 0.4s;
