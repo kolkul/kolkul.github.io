@@ -27,7 +27,7 @@ function blockBody() {
   } else {
     let scrollTop = $(document).scrollTop();
     $('body').css({
-      top: '-' + scrollTop + 'px'
+      top: '-' + scrollTop + 70 + 'px'
     });
 
     $('body').addClass('no-scroll');
