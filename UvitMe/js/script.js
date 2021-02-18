@@ -18,20 +18,25 @@ $('.num').bind("change keyup input click", function () {
 
 function blockBody() {
   if ($('body').hasClass('no-scroll')) {
+
     let scrollTop = $('body').attr('data-scroll');
 
     $('body').removeClass('no-scroll');
     $('body').attr('style', '');
 
     $(document).scrollTop(scrollTop);
+
   } else {
+
     let scrollTop = $(document).scrollTop();
+
+    $('body').addClass('no-scroll');
+    $('body').attr('data-scroll', scrollTop);
+
     $('body').css({
       top: '-' + scrollTop + 'px'
     });
 
-    $('body').addClass('no-scroll');
-    $('body').attr('data-scroll', scrollTop);
   }
 }
 
@@ -51,13 +56,6 @@ $(window).scroll(function () {
 
 // main block header animation
 
-function changeLettersWidth(ths) {
-  var activeLetters = $(ths).find('.word-end span.active');
-  var widthActiveLetters = activeLetters.width();
-
-  $(ths).find('.word-end').css('width', widthActiveLetters)
-}
-
 $(window).on('load', function () {
   $('.main-section__header').each(function () {
 
@@ -66,14 +64,11 @@ $(window).on('load', function () {
     }).get()));
     $(this).find('.change-words').attr('style', 'width: ' + maxWordsBoxWidth + 'px;');
 
-    changeLettersWidth(this);
-
     setInterval(() => {
 
       var getEl = $(this).find('.change-words span');
       var activeEl = $(this).find('.change-words span.active')
       var activeElIndex = activeEl.index();
-      var elLength = getEl.length - 1;
 
       activeEl.removeClass('active').addClass('top').clone().appendTo($(this).find('.change-words'));
       getEl.eq(activeElIndex + 1).addClass('active');
@@ -82,25 +77,6 @@ $(window).on('load', function () {
         $(this).find('.change-words span').removeClass('top');
         $(this).find('.change-words span').first().remove();
       }, 700)
-
-
-      var getActiveElAttr = $(this).find('.change-words span.active').attr('data-letter');
-
-      if (getActiveElAttr == 'm') {
-
-        $(this).find('.word-end .active').removeClass('active');
-        $(this).find('.word-end span.m').addClass('active');
-
-        changeLettersWidth(this);
-
-      } else if (getActiveElAttr == 'f') {
-
-        $(this).find('.word-end .active').removeClass('active');
-        $(this).find('.word-end span.f').addClass('active');
-
-        changeLettersWidth(this);
-
-      }
 
     }, 3000)
   })

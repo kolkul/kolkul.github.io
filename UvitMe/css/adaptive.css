@@ -23,13 +23,6 @@
 
 
 @media screen and (max-width: 1250px) {
-  body.no-scroll {
-    padding-right: 0;
-  }
-
-  body.no-scroll .header {
-    padding-right: 0;
-  }
 
   /* general */
   .container {
@@ -1164,6 +1157,11 @@
 
   .pop-up-content__img {
     display: none;
+  }
+
+  .pop-up-content .checkbox .wpcf7-list-item-label,
+  .pop-up-content .checkbox .wpcf7-list-item-label a {
+    font-size: 16px;
   }
 
   .pop-up-thanks .pop-up-content__btn {
