@@ -18,21 +18,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-html {
-  position:relative;
-  top:0px;
-  left:0px;
-  overflow:auto;
-  height:auto
+body.no-scroll {
+  position: relative;
+  overflow: hidden;
 }
 
-html.no-scroll {
-  position:fixed;
-  top:0px;
-  left:0px;
-  overflow:hidden;
-  height:100%;
-}
 
 /*html.no-scroll body {*/
 /*  position: relative;*/

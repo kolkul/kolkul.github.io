@@ -17,25 +17,29 @@ $('.num').bind("change keyup input click", function () {
 // Блокировка скроллинга Body
 
 function blockBody() {
-  if ($('html').hasClass('no-scroll')) {
+  if ($('body').hasClass('no-scroll')) {
 
-    let scrollTop = $('html').attr('data-scroll');
+    // let scrollTop = $('html').attr('data-scroll');
 
-    $('html').removeClass('no-scroll');
-    $('html').attr('style', '');
+    $('body').removeClass('no-scroll');
+    $('body').css('overflow', 'auto');
 
-    $(document).scrollTop(scrollTop);
+    // $('html').attr('style', '');
+
+    // $(document).scrollTop(scrollTop);
 
   } else {
 
-    let scrollTop = $(document).scrollTop();
+    // let scrollTop = $(document).scrollTop();
 
-    $('html').addClass('no-scroll');
-    $('html').attr('data-scroll', scrollTop);
+    $('body').css('overflow', 'hidden');
+    $('body').addClass('no-scroll');
 
-    $('html').css({
-      top: '-' + scrollTop + 'px'
-    });
+    // $('html').attr('data-scroll', scrollTop);
+    //
+    // $('html').css({
+    //   top: '-' + scrollTop + 'px'
+    // });
 
   }
 }
@@ -57,6 +61,7 @@ $(window).scroll(function (event) {
     }
   }
 });
+
 
 
 // main block header animation
