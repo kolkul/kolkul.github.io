@@ -18,33 +18,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body.no-scroll {
-  position: absolute;
-  overflow: hidden;
-  max-height: 100vh;
-  width: 100%;
-
-  -webkit-overflow-scrolling: touch;
-}
-
-/*html.no-scroll body {*/
-/*  position: relative;*/
+/*body.no-scroll {*/
+/*  position: absolute;*/
 /*  overflow: hidden;*/
-/*  height: 100%;*/
+/*  max-height: 100vh;*/
+/*  width: 100%;*/
 
-/*  pointer-events: none;*/
-
-/*  touch-action: none;*/
-/*  -ms-touch-action: none;*/
-/*}*/
-
-/*html.no-scroll .page {*/
-/*  position: relative;*/
-/*  overflow: hidden;*/
-/*  height: 100%;*/
-
-/*  touch-action: none;*/
-/*  -ms-touch-action: none;*/
+/*  -webkit-overflow-scrolling: touch;*/
 /*}*/
 
 body * {
