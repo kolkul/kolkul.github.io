@@ -24,6 +24,9 @@ body.no-scroll {
   /*right: 0;*/
   /*position: absolute;*/
   overflow: hidden;
+
+  touch-action: none;
+  -ms-touch-action: none;
 }
 
 body * {
