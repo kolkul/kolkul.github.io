@@ -25,7 +25,7 @@ function blockBody() {
 
     $('body').removeClass('no-scroll');
     $('body').css('overflow', 'auto');
-
+    $("body").unbind("touchmove");
 
 
     // $('html').attr('style', '');
@@ -38,6 +38,7 @@ function blockBody() {
 
     $('body').css('overflow', 'hidden');
     $('body').addClass('no-scroll');
+    $("body").on("touchmove", false);
 
     // $('html').attr('data-scroll', scrollTop);
 
@@ -59,12 +60,12 @@ $(window).scroll(function () {
     $('.header').removeClass('fill');
   }
 
-  if ($('body').hasClass('no-scroll')) {
-    // console.log(documentScrollStop);
-    $('body,html').animate({
-      scrollTop: documentScrollStop - 150
-    }, 300);
-  }
+  // if ($('body').hasClass('no-scroll')) {
+  //   // console.log(documentScrollStop);
+  //   $('body,html').animate({
+  //     scrollTop: documentScrollStop - 150
+  //   }, 300);
+  // }
 });
 
 
