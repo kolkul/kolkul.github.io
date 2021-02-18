@@ -24,7 +24,7 @@ function blockBody() {
     // let scrollTop = $('html').attr('data-scroll');
 
     $('body').removeClass('no-scroll');
-    $('body').css('overflow', 'auto');
+    // $('body').css('overflow', 'auto');
 
 
     // $('html').attr('style', '');
@@ -35,7 +35,7 @@ function blockBody() {
 
     documentScrollStop = $(document).scrollTop();
 
-    $('body').css('overflow', 'hidden');
+    // $('body').css('overflow', 'hidden');
     $('body').addClass('no-scroll');
 
     // $('html').attr('data-scroll', scrollTop);
@@ -60,9 +60,7 @@ $(window).scroll(function () {
   }
 
   if ($('body').hasClass('no-scroll')) {
-    $('body,html').animate({
-      scrollTop: documentScrollStop
-    }, 700);
+    $('body,html').scrollTop(documentScrollStop);
   }
 });
 
