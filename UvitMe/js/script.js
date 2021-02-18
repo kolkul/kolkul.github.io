@@ -15,7 +15,7 @@ $('.num').bind("change keyup input click", function () {
 });
 
 // Блокировка скроллинга Body
-const prevent = ev => ev.preventDefault();
+
 var documentScrollStop;
 
 function blockBody() {
@@ -24,15 +24,6 @@ function blockBody() {
     // let scrollTop = $('html').attr('data-scroll');
 
     $('body').removeClass('no-scroll');
-    $('html').css('overflow', 'auto');
-
-    document.onmousewheel=document.onwheel=function(){
-      return true;
-    };
-    document.addEventListener("MozMousePixelScroll",function(){return true},true);
-    document.onkeydown=function(e) {
-      if (e.keyCode>=33&&e.keyCode<=40) return true;
-    }
 
     // $('html').attr('style', '');
 
@@ -40,18 +31,7 @@ function blockBody() {
 
   } else {
 
-    documentScrollStop = $(document).scrollTop();
-
     $('body').addClass('no-scroll');
-    $('html').css('overflow', 'hidden');
-
-    document.onmousewheel=document.onwheel=function(){
-      return false;
-    };
-    document.addEventListener("MozMousePixelScroll",function(){return false},false);
-    document.onkeydown=function(e) {
-      if (e.keyCode>=33&&e.keyCode<=40) return false;
-    }
 
     // $('html').attr('data-scroll', scrollTop);
 
