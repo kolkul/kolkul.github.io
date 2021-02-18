@@ -17,11 +17,11 @@ $('.num').bind("change keyup input click", function () {
 // Блокировка скроллинга Body
 
 function blockBody() {
-  if ($('body').hasClass('no-scroll')) {
+  if ($('html').hasClass('no-scroll')) {
 
     // let scrollTop = $('body').attr('data-scroll');
 
-    $('body').removeClass('no-scroll');
+    $('html').removeClass('no-scroll');
     // $('body').attr('style', '');
 
     // $(document).scrollTop(scrollTop);
@@ -30,7 +30,7 @@ function blockBody() {
 
     // let scrollTop = $(document).scrollTop();
 
-    $('body').addClass('no-scroll');
+    $('html').addClass('no-scroll');
     // $('body').attr('data-scroll', scrollTop);
 
     // $('body').css({
@@ -42,13 +42,19 @@ function blockBody() {
 
 // header hide
 
-$(window).scroll(function () {
+$(window).scroll(function (event) {
   var scroll = $(this).scrollTop();
 
   if (scroll > 0) {
     $('.header').addClass('fill');
   } else {
     $('.header').removeClass('fill');
+  }
+
+  if ($('html').hasClass('no-scroll')) {
+    event.document.ontouchmove = function(e) {
+      e.preventDefault();
+    }
   }
 });
 

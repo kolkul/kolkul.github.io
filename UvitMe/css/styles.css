@@ -18,7 +18,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body.no-scroll {
+html.no-scroll {
+  overflow: hidden;
+}
+
+html.no-scroll body {
   position: relative;
   overflow: hidden;
   height: 100%;
@@ -27,7 +31,7 @@ body.no-scroll {
   -ms-touch-action: none;
 }
 
-body.no-scroll .page {
+html.no-scroll .page {
   position: relative;
   overflow: hidden;
   height: 100%;
