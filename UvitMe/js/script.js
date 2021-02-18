@@ -19,26 +19,35 @@ $('.num').bind("change keyup input click", function () {
 function blockBody() {
   if ($('body').hasClass('no-scroll')) {
 
-    let scrollTop = $('body').attr('data-scroll');
+    // let scrollTop = $('body').attr('data-scroll');
 
     $('body').removeClass('no-scroll');
-    $('.page').attr('style', '');
+    // $('.page').attr('style', '');
 
-    $(document).scrollTop(scrollTop);
+    // $(document).scrollTop(scrollTop);
 
   } else {
 
-    let scrollTop = $(document).scrollTop();
+    // let scrollTop = $(document).scrollTop();
 
     $('body').addClass('no-scroll');
-    $('body').attr('data-scroll', scrollTop);
+    // $('body').attr('data-scroll', scrollTop);
 
-    $('.page').css({
-      top: '-' + scrollTop + 'px'
-    });
+    // $('.page').css({
+    //   top: '-' + scrollTop + 'px'
+    // });
 
   }
 }
+
+$(document).on('scroll', function () {
+  var scrollNow = $(this).scrollTop();
+  $(this).scrollTop(scrollNow)
+
+  $('.page').css({
+    top: '-' + scrollNow + 'px'
+  });
+})
 
 
 // header hide

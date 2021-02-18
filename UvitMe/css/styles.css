@@ -39,12 +39,11 @@ body.no-scroll {
 }
 
 body.no-scroll .page {
-  position: fixed;
-  top: 0;
-  bottom: 0;
+  position: relative;
   right: 0;
   left: 0;
-
+  bottom: 0;
+  /*height: 100%;*/
   overflow: hidden;
   touch-action: none;
   -ms-touch-action: none;
