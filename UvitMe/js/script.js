@@ -48,7 +48,7 @@ function blockBody() {
 }
 
 $('body.no-scroll').on('touchmove', function () {
-  alert('touchmove');
+  $('body').css('background-color', 'red');
 })
 
 // header hide
@@ -63,7 +63,7 @@ $(window).scroll(function () {
   }
 
   if ($('body').hasClass('no-scroll')) {
-    alert('scroll');
+    $('body').css('background-color', 'green');
 
     $('body,html').animate({
       swipeUp: documentScrollStop - 150
