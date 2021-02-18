@@ -24,6 +24,10 @@ function blockBody() {
     $('body').removeClass('no-scroll');
     $('body').css('overflow', 'auto');
 
+
+    $('body').unbind('touchmove');
+
+
     // $('html').attr('style', '');
 
     // $(document).scrollTop(scrollTop);
@@ -40,6 +44,8 @@ function blockBody() {
     // $('html').css({
     //   top: '-' + scrollTop + 'px'
     // });
+
+    $('body').bind('touchmove', function(e){e.preventDefault()});
 
   }
 }
