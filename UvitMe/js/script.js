@@ -21,20 +21,20 @@ function blockBody() {
   if ($('body').hasClass('no-scroll')) {
 
     let scrollTop = $('body').attr('data-scroll');
+    $(document).scrollTop(scrollTop);
 
     $('body').removeClass('no-scroll');
     $('body').attr('style', '');
 
-    $(document).scrollTop(scrollTop);
-
   } else {
 
     let scrollTop = $(document).scrollTop();
-
-    $('body').addClass('no-scroll');
     $('body').css({
       top: '-' + scrollTop + 'px'
     });
+
+    $('body').addClass('no-scroll');
+
     $('body').attr('data-scroll', scrollTop);
 
   }
