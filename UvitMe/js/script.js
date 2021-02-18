@@ -36,7 +36,7 @@ function blockBody() {
 
     documentScrollStop = $(document).scrollTop();
 
-    // $('body').css('overflow', 'hidden');
+    $('body').css('overflow', 'hidden');
     $('body').addClass('no-scroll');
 
     // $('html').attr('data-scroll', scrollTop);
@@ -61,7 +61,7 @@ $(window).scroll(function () {
 
   if ($('body').hasClass('no-scroll')) {
     // console.log(documentScrollStop);
-    $(this).scrollTop(documentScrollStop - 5);
+    $(this).scrollTop(documentScrollStop - 15);
   }
 });
 
