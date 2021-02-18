@@ -16,6 +16,16 @@ $('.num').bind("change keyup input click", function () {
 
 // Блокировка скроллинга Body
 
+function disableScrolling() {
+  var x=window.scrollX;
+  var y=window.scrollY;
+  window.onscroll=function(){window.scrollTo(x, y);};
+}
+
+function enableScrolling() {
+  window.onscroll=function(){};
+}
+
 function blockBody() {
   if ($('body').hasClass('no-scroll')) {
 
@@ -25,7 +35,7 @@ function blockBody() {
     $('body').css('overflow', 'auto');
 
 
-    $('body').unbind('touchmove');
+    enableScrolling();
 
 
     // $('html').attr('style', '');
@@ -45,7 +55,7 @@ function blockBody() {
     //   top: '-' + scrollTop + 'px'
     // });
 
-    $('body').bind('touchmove', function(e){e.preventDefault()});
+    disableScrolling();
 
   }
 }
