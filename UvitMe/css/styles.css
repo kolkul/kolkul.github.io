@@ -19,15 +19,11 @@ body {
 }
 
 body.no-scroll {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
+  /*top: 0;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*position: absolute;*/
   overflow: hidden;
-
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
 }
 
 body * {
