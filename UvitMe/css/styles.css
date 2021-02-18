@@ -21,6 +21,7 @@ body {
 body.no-scroll {
   position: relative;
   overflow: hidden;
+  max-height: 100vh;
 }
 
 
