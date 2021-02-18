@@ -15,7 +15,7 @@ $('.num').bind("change keyup input click", function () {
 });
 
 // Блокировка скроллинга Body
-
+const prevent = ev => ev.preventDefault();
 var documentScrollStop;
 
 function blockBody() {
@@ -25,6 +25,8 @@ function blockBody() {
 
     $('body').removeClass('no-scroll');
     $('html').css('overflow', 'auto');
+
+    document.removeEventListener('wheel', prevent);
 
     // $('html').attr('style', '');
 
@@ -36,6 +38,8 @@ function blockBody() {
 
     $('body').addClass('no-scroll');
     $('html').css('overflow', 'hidden');
+
+    document.addEventListener('wheel', prevent, {passive: false});
 
     // $('html').attr('data-scroll', scrollTop);
 
