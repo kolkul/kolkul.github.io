@@ -107,7 +107,7 @@ img {
 }
 
 .page {
-  position: relative;
+  position: static;
   width: 100%;
 }
 
