@@ -19,23 +19,23 @@ $('.num').bind("change keyup input click", function () {
 function blockBody() {
   if ($('html').hasClass('no-scroll')) {
 
-    // let scrollTop = $('body').attr('data-scroll');
+    let scrollTop = $('html').attr('data-scroll');
 
     $('html').removeClass('no-scroll');
-    // $('body').attr('style', '');
+    $('html').attr('style', '');
 
-    // $(document).scrollTop(scrollTop);
+    $(document).scrollTop(scrollTop);
 
   } else {
 
-    // let scrollTop = $(document).scrollTop();
+    let scrollTop = $(document).scrollTop();
 
     $('html').addClass('no-scroll');
-    // $('body').attr('data-scroll', scrollTop);
+    $('html').attr('data-scroll', scrollTop);
 
-    // $('body').css({
-    //   top: '-' + scrollTop + 'px'
-    // });
+    $('html').css({
+      top: '-' + scrollTop + 'px'
+    });
 
   }
 }
