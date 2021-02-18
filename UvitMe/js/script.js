@@ -43,6 +43,10 @@ function blockBody() {
 $(document).on('scroll', function () {
   var scrollNow = $(this).scrollTop();
   $(this).scrollTop(scrollNow)
+
+  $('.page').css({
+    top: '-' + scrollNow + 'px'
+  });
 })
 
 
