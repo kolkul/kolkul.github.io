@@ -178,28 +178,13 @@ function getScrollBarWidth() {
 
 getScrollBarWidth();
 
-function bodyScroll(popup) {
-  if (popup.find('.pop-up').outerHeight(true) > $(window).height()) {
-    $('body').css('padding-right', scrollWidth + 'px');
-    $('.header').css('right', scrollWidth + 'px');
-  } else {
-    $('body').addClass('scroll');
-  }
+function bodyScroll() {
+  $('body').css('padding-right', scrollWidth + 'px');
+  $('.header').css('right', scrollWidth + 'px');
 }
 
 
 // pop-up
-
-
-function getBodyScrollTop() {
-  return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop);
-}
-
-function scrollYBody() {
-  body.dataset.scrollY = getBodyScrollTop()
-  body.style.top = `-${body.dataset.scrollY}px`
-}
-
 
 function scrollBlockForPC() {
   // if ($(window).width() > 1250) {
@@ -209,9 +194,8 @@ function scrollBlockForPC() {
 
 $('.open-pop-up').on('click', function () {
   $('.pop-up-container').addClass('active');
-  bodyScroll($('.pop-up-container'));
+  bodyScroll();
   scrollBlockForPC();
-  scrollYBody();
 });
 
 $('.open-pop-up-thanks').on('click', function () {
@@ -231,15 +215,13 @@ $('.open-pop-up-thanks').on('click', function () {
 
   }
 
-  bodyScroll($('.pop-up-thanks'));
-  scrollYBody();
+  bodyScroll();
 });
 
 $('.open-pop-up-question').on('click', function () {
   $('.pop-up-container-question').addClass('active');
-  bodyScroll($('.pop-up-container-question'));
+  bodyScroll();
   scrollBlockForPC();
-  scrollYBody();
 });
 
 $('.pop-up-wrapper').on('click', function (e) {
@@ -250,11 +232,9 @@ $('.pop-up-wrapper').on('click', function (e) {
 
 $('.close-pop-up').on('click', function () {
   $(this).closest('.pop-up-wrapper').removeClass('active');
-  $('body').removeClass('scroll');
   $('body').css('padding-right', 0 + 'px');
   $('.header').css('right', 0 + 'px');
   scrollBlockForPC();
-  window.scrollTo(0, body.dataset.scrollY)
 
   if ($(this).closest('.pop-up-video').length) {
     $(this).closest('.pop-up-video').find('#video').get(0).pause();
@@ -267,7 +247,7 @@ $('.close-pop-up').on('click', function () {
 $('.open-video').on('click', function () {
 
   scrollBlockForPC();
-  bodyScroll($('.pop-up-video'));
+  bodyScroll();
 
   $('.pop-up-video').addClass('active');
   $('#video').get(0).play();
