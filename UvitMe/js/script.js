@@ -26,7 +26,7 @@ function blockBody() {
     $('body').removeClass('no-scroll');
     $('html').css('overflow', 'auto');
 
-    document.removeEventListener('wheel', prevent);
+    document.removeEventListener('scroll', prevent);
 
     // $('html').attr('style', '');
 
@@ -39,7 +39,7 @@ function blockBody() {
     $('body').addClass('no-scroll');
     $('html').css('overflow', 'hidden');
 
-    document.addEventListener('wheel', prevent, {passive: false});
+    document.addEventListener('scroll', prevent, {passive: false});
 
     // $('html').attr('data-scroll', scrollTop);
 
