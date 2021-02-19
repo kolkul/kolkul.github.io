@@ -23,8 +23,6 @@ body.no-scroll {
   overflow: hidden;
   max-height: 100vh;
   height: 100%;
-
-  -webkit-overflow-scrolling: touch;
 }
 
 body * {
@@ -2251,12 +2249,15 @@ svg path {
   right: 0;
   top: 0;
   bottom: 0;
+  height: 100%;
   z-index: 101;
 
   opacity: 0;
   pointer-events: none;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.25);
+
+  -webkit-overflow-scrolling: touch;
 
   -webkit-transition: opacity 0.7s;
   transition: opacity 0.7s;
