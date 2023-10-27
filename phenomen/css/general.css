@@ -28,8 +28,6 @@ body.-scroll-lock {
 }
 
 body {
-  width: 100vw;
-  overflow-x: hidden;
   padding-top: 90px;
 }
 

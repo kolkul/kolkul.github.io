@@ -316,6 +316,8 @@
 
 .agency-section {
   margin-top: 254px;
+
+  overflow: hidden;
 }
 
 .agency-section .agency-section__slider {
@@ -1060,6 +1062,8 @@ input[type="range"]::-webkit-slider-thumb {
 
 .players-section {
   margin-top: 254px;
+
+  overflow: hidden;
 }
 
 .players-section .players-section__title-container {
