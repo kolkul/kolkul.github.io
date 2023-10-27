@@ -28,9 +28,8 @@ body.-scroll-lock {
 }
 
 body {
-  /*display: grid;*/
-  /*grid-template-rows: 1fr auto;*/
-  /*min-height: 100vh;*/
+  width: 100vw;
+  overflow: hidden;
   padding-top: 90px;
 }
 
