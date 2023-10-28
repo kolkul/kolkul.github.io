@@ -1,3 +1,13 @@
+const desktopBreakpoint = window.matchMedia(
+  "(min-width: 1025px) and (max-width: 1200px)"
+);
+const tabletBreakpoint = window.matchMedia(
+  "(min-width: 760px) and (max-width: 1024px)"
+);
+const mobileBreakpoint = window.matchMedia("(max-width: 759px)");
+
+// Line loop animation
+
 const lineBlock = document.querySelector(".loop-line-block");
 const windowWidth = window.innerWidth;
 
@@ -92,11 +102,30 @@ window.addEventListener("resize", initAgencySlider);
 
 // Expand description
 
+let opened = false;
+let hiddenBlockHeight = "auto";
+
 const getDescButton = document.querySelector(
   ".sport-section__description-button"
 );
 
-let opened = false;
+window.addEventListener("load", function () {
+  const getContentBlock = document.querySelector(
+    ".sport-section__description-content"
+  );
+  const getDescriptionBlock = getContentBlock.closest(
+    ".sport-section__description"
+  );
+
+  if (mobileBreakpoint.matches) {
+    const sum = getContentBlock.offsetHeight;
+
+    getDescriptionBlock.style.height = `${sum}px`;
+    hiddenBlockHeight = sum;
+  } else {
+    getDescriptionBlock.style.height = "";
+  }
+});
 
 getDescButton.addEventListener("click", function () {
   const getParentBox = this.closest(".sport-section__description-box");
@@ -122,11 +151,13 @@ getDescButton.addEventListener("click", function () {
 
     this.classList.remove("-opened");
 
-    getDesc.setAttribute("style", `height: ${getDescContentHeight}px;`);
+    getDesc.style.height = `${getDescContentHeight}px`;
 
     getDesc.offsetWidth;
 
-    getDesc.style = "";
+    console.log(hiddenBlockHeight);
+
+    getDesc.style.height = `${hiddenBlockHeight}px`;
   }
 });
 
@@ -148,14 +179,6 @@ const getClippedLine = document.querySelector("#clippedLine");
 
 const setClipValue = (value) => {
   let spaceNumber = 276;
-
-  const desktopBreakpoint = window.matchMedia(
-    "(min-width: 1025px) and (max-width: 1200px)"
-  );
-  const tabletBreakpoint = window.matchMedia(
-    "(min-width: 760px) and (max-width: 1024px)"
-  );
-  const mobileBreakpoint = window.matchMedia("(max-width: 759px)");
 
   if (desktopBreakpoint.matches) {
     spaceNumber = 246;
