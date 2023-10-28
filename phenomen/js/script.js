@@ -101,19 +101,20 @@ let opened = false;
 getDescButton.addEventListener("click", function () {
   const getParentBox = this.closest(".sport-section__description-box");
   const getDesc = getParentBox.querySelector(".sport-section__description");
-  const getDescContent = getDesc.querySelector("span");
+  const getDescContent = getDesc.querySelector(
+    ".sport-section__description-content"
+  );
 
   if (!opened) {
     opened = true;
+
+    getDescContent.setAttribute("style", `-webkit-line-clamp: unset;`);
 
     const getDescContentHeight = getDescContent.offsetHeight;
 
     this.classList.add("-opened");
 
-    getDesc.setAttribute(
-      "style",
-      `height: ${getDescContentHeight}px; -webkit-line-clamp: unset;`
-    );
+    getDesc.setAttribute("style", `height: ${getDescContentHeight}px;`);
   } else {
     opened = false;
 
@@ -121,10 +122,7 @@ getDescButton.addEventListener("click", function () {
 
     this.classList.remove("-opened");
 
-    getDesc.setAttribute(
-      "style",
-      `height: ${getDescContentHeight}px; -webkit-line-clamp: unset;`
-    );
+    getDesc.setAttribute("style", `height: ${getDescContentHeight}px;`);
 
     getDesc.offsetWidth;
 
@@ -136,7 +134,9 @@ document
   .querySelector(".sport-section__description")
   .addEventListener("transitionend", function () {
     if (opened) {
-      this.setAttribute("style", `height: auto; -webkit-line-clamp: unset;`);
+      this.setAttribute("style", `height: auto;`);
+    } else {
+      this.querySelector(".sport-section__description-content").style = "";
     }
   });
 

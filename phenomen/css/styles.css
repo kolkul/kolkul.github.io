@@ -576,6 +576,14 @@
   margin-top: 64px;
 }
 
+.sport-section .sport-section__description p + p {
+  margin-top: 24px;
+}
+
+.sport-section .sport-section__description-content {
+  display: inline-block;
+}
+
 .sport-section .sport-section__description-button {
   display: none;
 }
@@ -714,6 +722,10 @@
     margin-top: 32px;
   }
 
+  .sport-section .sport-section__description p + p {
+    margin-top: 18px;
+  }
+
   .sport-section .sport-section__content-links {
     margin-top: 32px;
   }
@@ -760,16 +772,19 @@
   .sport-section .sport-section__description {
     margin-top: 0;
 
-    height: 66px;
+    height: 191px;
 
     overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
 
     -webkit-transition: height 0.3s;
     transition: height 0.3s;
+  }
+
+  .sport-section .sport-section__description-content {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
   }
 
   .sport-section .sport-section__description-button {
