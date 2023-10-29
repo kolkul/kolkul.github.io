@@ -171,44 +171,6 @@ document
     }
   });
 
-// Videos animation
-
-const getVideoRange = document.querySelector("#videosRange");
-const getClippedVideo = document.querySelector("#clippedVideo");
-const getClippedLine = document.querySelector("#clippedLine");
-
-const setClipValue = (value) => {
-  let spaceNumber = 276;
-
-  if (desktopBreakpoint.matches) {
-    spaceNumber = 246;
-    getVideoRange.setAttribute("max", "70");
-  } else if (tabletBreakpoint.matches) {
-    spaceNumber = 134;
-    getVideoRange.setAttribute("max", "77");
-  } else if (mobileBreakpoint.matches) {
-    spaceNumber = 57;
-  }
-
-  const getValueNumber = Number(value);
-
-  getClippedVideo.style = `clip-path: polygon(0 0, calc(${getValueNumber}% + ${spaceNumber}px) 0, ${getValueNumber}% 100%, 0 100%)`;
-
-  getClippedLine.style.left = `calc(${getValueNumber}% + ${spaceNumber / 2}px)`;
-};
-
-getVideoRange.oninput = (input) => {
-  const getRangeValue = getVideoRange.value;
-
-  setClipValue(getRangeValue);
-};
-
-window.addEventListener("load", () => {
-  const getRangeValue = getVideoRange.value;
-
-  setClipValue(getRangeValue);
-});
-
 // Player slider init
 
 document.addEventListener("DOMContentLoaded", () => {
