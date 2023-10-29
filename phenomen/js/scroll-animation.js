@@ -55,9 +55,10 @@ gsap.set(getVideoRange, {
 
 gsap.to(getVideoRange, {
   scrollTrigger: {
+    markers: true,
     trigger: getVideoRange,
-    start: "top-=400px center",
-    end: "bottom-=300px center",
+    start: "top-=300px bottom-=10%",
+    end: "bottom-=300px top+=10%",
     toggleActions: "play none none none",
     onUpdate: ({ progress }) => {
       setClipValue(progress * 100);

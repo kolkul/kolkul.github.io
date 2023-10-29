@@ -476,27 +476,29 @@
 
           <div class="videos-section__videos-block">
             <video
-              class="main-section__video -video-lazyload"
-              data-src="images/video-1.mp4"
+              class="-video-lazyload"
+              data-src="../images/video-2.mp4"
               preload="none"
-              poster="images/poster.png"
+              poster="../images/poster.png"
+              muted
+              loop
+            ></video>
+
+            <video
+              id="clippedVideo"
+              class="-video-lazyload"
+              data-src="../images/video-1.mp4"
+              preload="none"
+              poster="../images/poster.png"
               muted
               loop
             ></video>
 
             <img
-              id="clippedVideo"
-              class="-lazyload"
-              srcset="images/lazyload.png"
-              src="images/career-plus-image.jpg"
-              alt="We are looking for - Phenomen.com"
-            />
-
-            <img
               id="clippedLine"
               class="-lazyload"
-              srcset="images/lazyload.png"
-              src="images/clipped-line.svg"
+              srcset="../images/lazyload.png"
+              src="../images/clipped-line.svg"
               alt="We are looking for - Phenomen.com"
             />
 
@@ -506,7 +508,7 @@
               step="0.1"
               min="5"
               max="80"
-              value="30"
+              value="5"
             />
           </div>
         </div>
