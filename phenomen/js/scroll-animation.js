@@ -49,13 +49,8 @@ window.addEventListener("load", () => {
   setClipValue(getRangeValue);
 });
 
-gsap.set(getVideoRange, {
-  scrollTrigger: {},
-});
-
 gsap.to(getVideoRange, {
   scrollTrigger: {
-    markers: true,
     trigger: getVideoRange,
     start: "top-=300px bottom-=10%",
     end: "bottom-=300px top+=10%",
