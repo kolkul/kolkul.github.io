@@ -42,7 +42,7 @@ const prepareLine = () => {
 
 // Infinite line initialization
 
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
   prepareLine();
 });
 

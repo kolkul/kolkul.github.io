@@ -1,5 +1,6 @@
 const getLazyloadImages = document.querySelectorAll(".-lazyload");
 const getLazyloadVideos = document.querySelectorAll(".-video-lazyload");
+const getLazyloadLogoGif = document.getElementById("logo-gif");
 
 const removeAttrSrcsetFromImg = () => {
   getLazyloadImages.forEach((img) => {
@@ -14,27 +15,64 @@ const startVideoLoading = () => {
   getLazyloadVideos.forEach((video) => {
     const getDataSrc = video.getAttribute("data-src");
 
-    video.setAttribute("src", getDataSrc);
-    video.load();
+    video.removeAttribute("data-src");
 
-    video.addEventListener("loadeddata", (e) => {
-      video.setAttribute("autoplay", "");
-      video.setAttribute("playsinline", "");
-      video.play();
-    });
+    function fetchVideo(url) {
+      return new Promise(function (resolve, reject) {
+        let request = new XMLHttpRequest();
+        request.open("GET", url);
+        request.responseType = "blob";
+
+        request.onload = function () {
+          if (request.status === 200) {
+            resolve(request.response);
+          } else {
+            reject(new Error(req.statusText));
+          }
+        };
+
+        request.onerror = function () {
+          reject(new Error("Network error"));
+        };
+
+        request.send();
+      });
+    }
+
+    fetchVideo(getDataSrc)
+      .then(function (blob) {
+        video.src = URL.createObjectURL(blob);
+        video.play();
+      })
+      .catch(function (err) {
+        console.error("Unable to fetch video: " + err.message);
+      });
   });
 };
 
-window.addEventListener("load", () => {
+// Gif logo lazyload
+getLazyloadLogoGif.addEventListener("load", function () {
+  this.removeAttribute("srcset");
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   const getWindowScroll = window.scrollY;
 
   if (getWindowScroll > 0) {
     removeAttrSrcsetFromImg();
   }
 
-  startVideoLoading();
+  // logoLazyload();
 
   window.addEventListener("scroll", () => {
     removeAttrSrcsetFromImg();
   });
+});
+
+window.addEventListener("load", () => {
+  startVideoLoading();
+
+  console.log(getMainHref);
+
+  getLazyloadLogoGif.src = `${getMainHref}images/logo-gif.gif`;
 });

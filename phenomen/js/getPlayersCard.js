@@ -34,20 +34,20 @@ const returnHtml = (params) => {
                       >
                         <img
                           src="${getMainHref}images/tm-icon.png"
-                          alt="${getLang.name} - Phenomen.com"
+                          alt="${getLang.name} - Phenomen.pro"
                         />
                       </a>
                     </div>
                     <div class="player-card__fc">
                       <img
                         src="${getMainHref}images/fc-logo/${fc}"
-                        alt="${getLang.name} - Phenomen.com"
+                        alt="${getLang.name} - Phenomen.pro"
                       />
                     </div>
                     <div class="player-card__photo">
                       <img
                         src="${getMainHref}images/players/${photo}"
-                        alt="${getLang.name} - Phenomen.com "
+                        alt="${getLang.name} - Phenomen.pro "
                       />
                     </div>
                     <div class="player-card__bot">
