@@ -1,0 +1,405 @@
+[
+  {
+    "dateOfBirth": "13/02/1996",
+    "height": "181",
+    "weight": "75",
+
+    "en": {
+      "name": "Demchenko Oleksandr",
+      "club": "Kolos Kovalivka",
+      "position": "Central Midfield",
+      "leg": "Right",
+      "citizenship": "Ukraine"
+    },
+
+    "uk": {
+      "name": "Демченко Олександр",
+      "club": "Колос Ковалівка",
+      "position": "Центральний півзахисник",
+      "leg": "Права",
+      "citizenship": "Україна"
+    },
+
+    "url": {
+      "youtube": "https://www.youtube.com/channel/UCL-QUz8grP9mSlDYmtq8jZQ",
+      "tm": "https://www.transfermarkt.com/oleksandr-demchenko/profil/spieler/463845"
+    },
+
+    "img": {
+      "photo": "demchenko.png",
+      "fc": "fc_kolos.svg"
+    }
+  },
+  {
+    "dateOfBirth": "17/12/2000",
+    "height": "182",
+    "weight": "74",
+
+    "en": {
+      "name": "Tverdokhlib Yehor",
+      "club": "Minaj FC",
+      "position": "Attacking Midfield",
+      "leg": "Right",
+      "citizenship": "Ukraine"
+    },
+
+    "uk": {
+      "name": "Твердохліб Єгор",
+      "club": "Минай",
+      "position": "Атакувальний Півзахисник",
+      "leg": "Права",
+      "citizenship": "Україна"
+    },
+
+    "url": {
+      "youtube": "https://youtu.be/3swBPYkUJco?si=tSWcwNo_wu9YFwzK",
+      "tm": "https://www.transfermarkt.com/yegor-tverdokhlib/profil/spieler/758845"
+    },
+
+    "img": {
+      "photo": "tverdohlib.png",
+      "fc": "fc_minaj.png"
+    }
+  },
+  {
+    "dateOfBirth": "13/01/1997",
+    "height": "177",
+    "weight": "73",
+
+    "en": {
+      "name": "Vitenchuk Vadym",
+      "club": "Minaj FC",
+      "position": "Defensive Midfield",
+      "leg": "Right",
+      "citizenship": "Ukraine"
+    },
+
+    "uk": {
+      "name": "Вітенчук Вадим",
+      "club": "Минай",
+      "position": "Опорний Півзахисник",
+      "leg": "Права",
+      "citizenship": "Україна"
+    },
+
+    "url": {
+      "youtube": "https://youtu.be/Cul6R250wvE",
+      "tm": "https://www.transfermarkt.com/vadym-vitenchuk/profil/spieler/641426"
+    },
+
+    "img": {
+      "photo": "vitenchujk.png",
+      "fc": "fc_minaj.png"
+    }
+  },
+  {
+    "dateOfBirth": "10/11/1997",
+    "height": "176",
+    "weight": "74",
+
+    "en": {
+      "name": "Vakulko Yuriy",
+      "club": "Kryvbas",
+      "position": "Central Midfield",
+      "leg": "Left",
+      "citizenship": "Ukraine"
+    },
+
+    "uk": {
+      "name": "Вакулко Юрій",
+      "club": "Кривбас",
+      "position": "Центральний Півзахисник",
+      "leg": "Ліва",
+      "citizenship": "Україна"
+    },
+
+    "url": {
+      "youtube": "https://www.youtube.com/channel/UCL-QUz8grP9mSlDYmtq8jZQ",
+      "tm": "https://www.transfermarkt.com/yuriy-vakulko/profil/spieler/369155"
+    },
+
+    "img": {
+      "photo": "vakulko.png",
+      "fc": "fc_kryvbas.png"
+    }
+  },
+  {
+    "dateOfBirth": "04/11/1999",
+    "height": "184",
+    "weight": "78",
+
+    "en": {
+      "name": "Semenov Dmytro",
+      "club": "Kryvbas",
+      "position": "Centre-Back",
+      "leg": "Right",
+      "citizenship": "Ukraine"
+    },
+
+    "uk": {
+      "name": "Семенов Дмитро",
+      "club": "Кривбас",
+      "position": "Центральний Захисник",
+      "leg": "Права",
+      "citizenship": "Україна"
+    },
+
+    "url": {
+      "youtube": "https://www.youtube.com/channel/UCL-QUz8grP9mSlDYmtq8jZQ",
+      "tm": "https://www.transfermarkt.com/dmytro-semenov/profil/spieler/495918"
+    },
+
+    "img": {
+      "photo": "semenov.png",
+      "fc": "fc_kryvbas.png"
+    }
+  },
+  {
+    "dateOfBirth": "03/07/1992",
+    "height": "190",
+    "weight": "80",
+
+    "en": {
+      "name": "Andriy Klishchuk",
+      "club": "Kryvbas",
+      "position": "Goalkeeper",
+      "leg": "Right",
+      "citizenship": "Ukraine"
+    },
+
+    "uk": {
+      "name": "Андрій Кліщук",
+      "club": "Кривбас",
+      "position": "Голкіпер",
+      "leg": "Права",
+      "citizenship": "Україна"
+    },
+
+    "url": {
+      "youtube": "https://www.youtube.com/channel/UCL-QUz8grP9mSlDYmtq8jZQ",
+      "tm": "https://www.transfermarkt.com/andriy-klishchuk/profil/spieler/190190"
+    },
+
+    "img": {
+      "photo": "klishhuk.png",
+      "fc": "fc_kryvbas.png"
+    }
+  },
+  {
+    "dateOfBirth": "07/09/1994",
+    "height": "170",
+    "weight": "64",
+
+    "en": {
+      "name": "Maksym Zaderaka",
+      "club": "Kryvbas",
+      "position": "Winger",
+      "leg": "Right",
+      "citizenship": "Ukraine"
+    },
+
+    "uk": {
+      "name": "Максим Задерака",
+      "club": "Кривбас",
+      "position": "Фланговий Півзахисник",
+      "leg": "Права",
+      "citizenship": "Україна"
+    },
+
+    "url": {
+      "youtube": "https://www.youtube.com/channel/UCL-QUz8grP9mSlDYmtq8jZQ",
+      "tm": "https://www.transfermarkt.com/maksym-zaderaka/profil/spieler/325429"
+    },
+
+    "img": {
+      "photo": "zaderaka.png",
+      "fc": "fc_kryvbas.png"
+    }
+  },
+  {
+    "dateOfBirth": "28/02/1997",
+    "height": "181",
+    "weight": "78",
+
+    "en": {
+      "name": "Andriy Ponedelnik",
+      "club": "Kryvbas",
+      "position": "Right-Back",
+      "leg": "Right",
+      "citizenship": "Ukraine"
+    },
+
+    "uk": {
+      "name": "Андрій Понєдєльнік",
+      "club": "Кривбас",
+      "position": "Правий Захисник",
+      "leg": "Права",
+      "citizenship": "Україна"
+    },
+
+    "url": {
+      "youtube": "https://www.youtube.com/channel/UCL-QUz8grP9mSlDYmtq8jZQ",
+      "tm": "https://www.transfermarkt.com/andriy-ponedelnik/profil/spieler/522833"
+    },
+
+    "img": {
+      "photo": "ponjedjelnik.png",
+      "fc": "fc_kryvbas.png"
+    }
+  },
+  {
+    "dateOfBirth": "12/04/1999",
+    "height": "187",
+    "weight": "81",
+
+    "en": {
+      "name": "Denys Ustymenko",
+      "club": "Kryvbas",
+      "position": "Striker",
+      "leg": "Right",
+      "citizenship": "Ukraine"
+    },
+
+    "uk": {
+      "name": "Денис Устименко",
+      "club": "Кривбас",
+      "position": "Центральний нападник",
+      "leg": "Права",
+      "citizenship": "Україна"
+    },
+
+    "url": {
+      "youtube": "https://www.youtube.com/channel/UCL-QUz8grP9mSlDYmtq8jZQ",
+      "tm": "https://www.transfermarkt.com/denys-ustymenko/profil/spieler/622410"
+    },
+
+    "img": {
+      "photo": "ustimenko.png",
+      "fc": "fc_kryvbas.png"
+    }
+  },
+  {
+    "dateOfBirth": "18/08/1993",
+    "height": "176",
+    "weight": "70",
+
+    "en": {
+      "name": "Denys Balan",
+      "club": "Veres",
+      "position": "Right-Back",
+      "leg": "Right",
+      "citizenship": "Ukraine"
+    },
+
+    "uk": {
+      "name": "Денис Балан",
+      "club": "Верес",
+      "position": "Правий Захисник",
+      "leg": "Права",
+      "citizenship": "Україна"
+    },
+
+    "url": {
+      "youtube": "https://www.youtube.com/channel/UCL-QUz8grP9mSlDYmtq8jZQ",
+      "tm": "https://www.transfermarkt.com/denys-balan/profil/spieler/166563"
+    },
+
+    "img": {
+      "photo": "balan.png",
+      "fc": "fc_veres.png"
+    }
+  },
+  {
+    "dateOfBirth": "02/12/1995",
+    "height": "175",
+    "weight": "68",
+
+    "en": {
+      "name": "Yevheniy Shevchenko",
+      "club": "Veres",
+      "position": "Left-Back",
+      "leg": "Left",
+      "citizenship": "Ukraine"
+    },
+
+    "uk": {
+      "name": "Євгеній Шевченко",
+      "club": "Верес",
+      "position": "Лівий Захисник",
+      "leg": "Ліва",
+      "citizenship": "Україна"
+    },
+
+    "url": {
+      "youtube": "https://www.youtube.com/channel/UCL-QUz8grP9mSlDYmtq8jZQ",
+      "tm": ""
+    },
+
+    "img": {
+      "photo": "shevchenko.png",
+      "fc": "fc_veres.png"
+    }
+  },
+  {
+    "dateOfBirth": "21/02/1996",
+    "height": "182",
+    "weight": "81",
+
+    "en": {
+      "name": "Taras Moroz",
+      "club": "Obolon",
+      "position": "Defensive Midfield",
+      "leg": "Right",
+      "citizenship": "Ukraine"
+    },
+
+    "uk": {
+      "name": "Тарас Мороз",
+      "club": "Оболонь",
+      "position": "Опорний Півзахисник",
+      "leg": "Права",
+      "citizenship": "Україна"
+    },
+
+    "url": {
+      "youtube": "https://www.youtube.com/channel/UCL-QUz8grP9mSlDYmtq8jZQ",
+      "tm": "https://www.transfermarkt.com/taras-moroz/profil/spieler/522832"
+    },
+
+    "img": {
+      "photo": "moroz.png",
+      "fc": "fc_obolon.png"
+    }
+  },
+  {
+    "dateOfBirth": "08/06/1997",
+    "height": "175",
+    "weight": "63",
+
+    "en": {
+      "name": "Oleh Ilyin",
+      "club": "Kolos Kovalivka",
+      "position": "Winger",
+      "leg": "Right",
+      "citizenship": "Ukraine"
+    },
+
+    "uk": {
+      "name": "Олег Ільїн",
+      "club": "Колос Ковалівка",
+      "position": "Фланговий Півзахисник",
+      "leg": "Права",
+      "citizenship": "Україна"
+    },
+
+    "url": {
+      "youtube": "https://www.youtube.com/channel/UCL-QUz8grP9mSlDYmtq8jZQ",
+      "tm": "https://www.transfermarkt.com/oleg-ilyin/profil/spieler/495923"
+    },
+
+    "img": {
+      "photo": "ilyin.png",
+      "fc": "fc_kolos.svg"
+    }
+  }
+]
