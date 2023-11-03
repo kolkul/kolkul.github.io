@@ -2,23 +2,33 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Videos animation
 
+let spaceNumber;
 const getVideoRange = document.querySelector("#videosRange");
 const getClippedVideo = document.querySelector("#clippedVideo");
 const getClippedLine = document.querySelector("#clippedLine");
 
-const setClipValue = (value) => {
-  let spaceNumber = 276;
+const getSpaceNumber = () => {
+  let number;
 
   if (desktopBreakpoint.matches) {
-    spaceNumber = 246;
+    number = 246;
     getVideoRange.setAttribute("max", "70");
   } else if (tabletBreakpoint.matches) {
-    spaceNumber = 134;
+    number = 134;
     getVideoRange.setAttribute("max", "77");
   } else if (mobileBreakpoint.matches) {
-    spaceNumber = 57;
+    number = 57;
+  } else {
+    number = 276;
   }
 
+  spaceNumber = number;
+};
+
+document.addEventListener("DOMContentLoaded", getSpaceNumber);
+window.addEventListener("resize", getSpaceNumber);
+
+const setClipValue = (value) => {
   const getMinRange = getVideoRange.getAttribute("min");
   const getMaxRange = getVideoRange.getAttribute("max");
   const getNumberValue = Number(value);
@@ -37,11 +47,11 @@ const setClipValue = (value) => {
   getClippedLine.style.left = `calc(${getValueNumber}% + ${spaceNumber / 2}px)`;
 };
 
-getVideoRange.oninput = (input) => {
+getVideoRange.addEventListener("input", (input) => {
   const getRangeValue = getVideoRange.value;
 
   setClipValue(getRangeValue);
-};
+});
 
 window.addEventListener("load", () => {
   const getRangeValue = getVideoRange.value;
