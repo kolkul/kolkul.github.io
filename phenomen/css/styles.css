@@ -942,7 +942,7 @@
   user-select: none;
 }
 
-.videos-section .videos-section__videos-block #clippedVideo {
+.videos-section #clippedVideo {
   position: absolute;
   top: 0;
   left: 0;
@@ -956,15 +956,27 @@
   -webkit-user-select: none;
   user-select: none;
 
-  clip-path: polygon(0 0, 69% 0, 44% 100%, 0 100%);
+  /*clip-path: polygon(0 0, 69% 0, 44% 100%, 0 100%);*/
+  -webkit-transform: skew(-24deg, 0);
+  transform: skew(-24deg, 0);
+  overflow: hidden;
 
-  -webkit-transition: ease-in clip-path 0.02s;
-  transition: ease-in clip-path 0.02s;
+  -webkit-transition: ease-in transform 0.02s;
+  transition: ease-in transform 0.02s;
+}
+
+.videos-section #clippedVideo video {
+  width: 110%;
+  -webkit-transform: skew(-24deg, 0);
+  transform: skew(-24deg, 0);
+
+  -webkit-transition: ease-in transform 0.02s;
+  transition: ease-in transform 0.02s;
 }
 
 .videos-section #clippedLine {
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 0;
   bottom: 0;
 

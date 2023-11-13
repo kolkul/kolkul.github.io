@@ -28,23 +28,49 @@ const getSpaceNumber = () => {
 document.addEventListener("DOMContentLoaded", getSpaceNumber);
 window.addEventListener("resize", getSpaceNumber);
 
+var qrDecompone = function (a) {
+  var angle = Math.atan2(a[1], a[0]),
+    denom = Math.pow(a[0], 2) + Math.pow(a[1], 2),
+    scaleX = Math.sqrt(denom),
+    scaleY = (a[0] * a[3] - a[2] * a[1]) / scaleX,
+    skewX = Math.atan2(a[0] * a[2] + a[1] * a[3], denom);
+  return {
+    angle: angle / (Math.PI / 180), // this is rotation angle in degrees
+    scaleX: scaleX, // scaleX factor
+    scaleY: scaleY, // scaleY factor
+    skewX: skewX / (Math.PI / 180), // skewX angle degrees
+    skewY: 0, // skewY angle degrees
+    translateX: a[4], // translation point  x
+    translateY: a[5], // translation point  y
+  };
+};
+
 const setClipValue = (value) => {
   const getMinRange = getVideoRange.getAttribute("min");
   const getMaxRange = getVideoRange.getAttribute("max");
   const getNumberValue = Number(value);
   let getValueNumber;
 
-  if (getMinRange > getNumberValue) {
-    getValueNumber = Number(getMinRange);
-  } else if (getMaxRange < getNumberValue) {
-    getValueNumber = Number(getMaxRange);
-  } else {
-    getValueNumber = getNumberValue;
-  }
+  // if (getMinRange > getNumberValue) {
+  // getValueNumber = Number(getMinRange);
+  // } else if (getMaxRange < getNumberValue) {
+  // getValueNumber = Number(getMaxRange);
+  // } else {
+  getValueNumber = getNumberValue;
+  // }
+  console.log(getComputedStyle(getClippedVideo).transform);
 
-  getClippedVideo.style = `clip-path: polygon(0 0, calc(${getValueNumber}% + ${spaceNumber}px) 0, ${getValueNumber}% 100%, 0 100%)`;
+  const test = qrDecompone(getComputedStyle(getClippedVideo).transform);
 
-  getClippedLine.style.left = `calc(${getValueNumber}% + ${spaceNumber / 2}px)`;
+  console.log(test);
+
+  // getClippedVideo.style = `clip-path: polygon(0 0, calc(${getValueNumber}% + ${spaceNumber}px) 0, ${getValueNumber}% 100%, 0 100%)`;
+
+  getClippedVideo.style.transform = `translateX(${getValueNumber}%) skew(-24deg, 0)`;
+  getClippedVideo.querySelector(
+    "video"
+  ).style.transform = `translateX(-${getValueNumber}%) skew(24deg, 0)`;
+  getClippedLine.style.left = `calc(${getValueNumber}%`;
 };
 
 getVideoRange.addEventListener("input", (input) => {
