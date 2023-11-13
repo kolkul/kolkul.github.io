@@ -931,6 +931,7 @@
   border-radius: 8px;
 }
 
+.videos-section .videos-section__videos-block img,
 .videos-section .videos-section__videos-block video {
   display: block;
   width: 100%;
@@ -965,8 +966,9 @@
   transition: ease-in transform 0.02s;
 }
 
+.videos-section #clippedVideo img,
 .videos-section #clippedVideo video {
-  width: 110%;
+  width: 100%;
   -webkit-transform: skew(-24deg, 0);
   transform: skew(-24deg, 0);
 
