@@ -48,7 +48,7 @@ const setClipValue = (value) => {
   getClippedVideo.querySelector(
     "img"
   ).style.transform = `translateX(-${getValueNumber}%) skew(24deg, 0)`;
-  getClippedLine.style.left = `calc(${getValueNumber}%`;
+  getClippedLine.style.transform = `translateX(${getValueNumber}%)`;
 };
 
 getVideoRange.addEventListener("input", (input) => {
