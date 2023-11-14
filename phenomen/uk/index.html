@@ -475,39 +475,55 @@
           </div>
 
           <div class="videos-section__videos-block">
-            <video
-              class="-video-lazyload"
-              data-src="../images/video-2.mp4"
-              preload="none"
-              poster="../images/video-poster-2.jpg"
-              muted
-              loop
-            ></video>
-
-            <video
-              id="clippedVideo"
-              class="-video-lazyload"
-              data-src="../images/video-1.mp4"
-              preload="none"
-              poster="../images/video-poster-1.jpg"
-              muted
-              loop
-            ></video>
+            <!--            <video-->
+            <!--              class="-video-lazyload"-->
+            <!--              data-src="images/video-2.mp4"-->
+            <!--              preload="none"-->
+            <!--              poster="images/video-poster-2.jpg"-->
+            <!--              muted-->
+            <!--              loop-->
+            <!--            ></video>-->
 
             <img
-              id="clippedLine"
               class="-lazyload"
-              srcset="../images/lazyload.png"
-              src="../images/clipped-line.svg"
+              srcset="images/lazyload.png"
+              src="images/video-poster-2.jpg"
               alt="We are looking for - Phenomen.pro"
             />
+
+            <div id="clippedVideo">
+              <!--              <video-->
+              <!--                class="-video-lazyload"-->
+              <!--                data-src="images/video-1.mp4"-->
+              <!--                preload="none"-->
+              <!--                poster="images/video-poster-1.jpg"-->
+              <!--                muted-->
+              <!--                loop-->
+              <!--              ></video>-->
+
+              <img
+                class="-lazyload"
+                srcset="images/lazyload.png"
+                src="images/video-poster-1.jpg"
+                alt="We are looking for - Phenomen.pro"
+              />
+            </div>
+
+            <div id="clippedLine">
+              <img
+                class="-lazyload"
+                srcset="images/lazyload.png"
+                src="images/clipped-line.svg"
+                alt="We are looking for - Phenomen.pro"
+              />
+            </div>
 
             <input
               id="videosRange"
               type="range"
               step="0.1"
-              min="5"
-              max="80"
+              min="10"
+              max="90"
               value="5"
             />
           </div>
