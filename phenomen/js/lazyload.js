@@ -11,38 +11,40 @@ const removeAttrSrcsetFromImg = () => {
   });
 };
 
+function fetchMedia(url) {
+  return new Promise(function (resolve, reject) {
+    let request = new XMLHttpRequest();
+    request.open("GET", url);
+    request.responseType = "blob";
+
+    request.onload = function () {
+      if (request.status === 200) {
+        resolve(request.response);
+      } else {
+        reject(new Error(req.statusText));
+      }
+    };
+
+    request.onerror = function () {
+      reject(new Error("Network error"));
+    };
+
+    request.send();
+  });
+}
+
 const startVideoLoading = () => {
   getLazyloadVideos.forEach((video) => {
     const getDataSrc = video.getAttribute("data-src");
 
     video.removeAttribute("data-src");
 
-    function fetchVideo(url) {
-      return new Promise(function (resolve, reject) {
-        let request = new XMLHttpRequest();
-        request.open("GET", url);
-        request.responseType = "blob";
-
-        request.onload = function () {
-          if (request.status === 200) {
-            resolve(request.response);
-          } else {
-            reject(new Error(req.statusText));
-          }
-        };
-
-        request.onerror = function () {
-          reject(new Error("Network error"));
-        };
-
-        request.send();
-      });
-    }
-
-    fetchVideo(getDataSrc)
+    fetchMedia(getDataSrc)
       .then(function (blob) {
         video.src = URL.createObjectURL(blob);
         video.play();
+        video.setAttribute("playsinline", "");
+        video.setAttribute("autoplay", "");
       })
       .catch(function (err) {
         console.error("Unable to fetch video: " + err.message);
@@ -51,9 +53,7 @@ const startVideoLoading = () => {
 };
 
 // Gif logo lazyload
-getLazyloadLogoGif.addEventListener("load", function () {
-  this.removeAttribute("srcset");
-});
+getLazyloadLogoGif.addEventListener("load", function () {});
 
 document.addEventListener("DOMContentLoaded", () => {
   const getWindowScroll = window.scrollY;
@@ -70,9 +70,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("load", () => {
-  startVideoLoading();
+  const newLogoWay = `${getMainHref}images/logo-gif.gif`;
 
-  console.log(getMainHref);
+  fetchMedia(newLogoWay)
+    .then(function (blob) {
+      console.log(URL.createObjectURL(blob));
 
-  getLazyloadLogoGif.src = `${getMainHref}images/logo-gif.gif`;
+      getLazyloadLogoGif.src = URL.createObjectURL(blob);
+      getLazyloadLogoGif.removeAttribute("srcset");
+      startVideoLoading();
+    })
+    .catch(function (err) {
+      console.error("Unable to fetch logo: " + err.message);
+    });
 });
