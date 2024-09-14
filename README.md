@@ -1,7 +1,7 @@
 # Mykola Kulinich
-## My project:
+# My project:
 
-Ecosphere - https://ecosphere.group/en/
+## Ecosphere - https://ecosphere.group/en/
 
 * Marketing website | Landing page
 * Company: A group of companies engaged in green energy, juice and water production
@@ -14,7 +14,7 @@ Ecosphere - https://ecosphere.group/en/
 
 More info - https://goodface.agency/case/ecosphere/
 
-365games - https://365games.net/
+## 365games - https://365games.net/
 
 * eSports | SaaS
 * Marketing multipage website and Inside platform (MVP)
@@ -34,3 +34,5 @@ More info - https://goodface.agency/case/ecosphere/
 * An interesting task was to use a 3D model of a game character in the main block on the marketing page. Unfortunately, we had to abandon it due to the workload. 
 
 More info - https://goodface.agency/case/365games/
+
+## Of course, these are not all the projects I had the opportunity to work on. The list will grow with many interesting projects
